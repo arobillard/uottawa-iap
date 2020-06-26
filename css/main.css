@@ -265,6 +265,10 @@ select:focus {
   text-align: left;
 }
 
+.footer .icon-wrap p {
+  font-size: .875rem;
+}
+
 .icon-download {
   width: 4rem;
   height: 4rem;
@@ -334,6 +338,7 @@ select:focus {
   .footer .wrapper {
     grid-template-columns: repeat(3, 1fr);
     align-items: flex-end;
+    justify-items: flex-start;
     text-align: left;
   }
 
