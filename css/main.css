@@ -217,7 +217,7 @@ select:focus {
 }
 
 .hero-content .headline {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -297,6 +297,14 @@ select:focus {
 
 .i-download + .icon-label {
   font-size: .625rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  .hero-content .headline {
+    font-size: 3rem;
+  }
+
 }
 
 @media only screen and (min-width: 48em) {
