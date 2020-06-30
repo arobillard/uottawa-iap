@@ -159,7 +159,8 @@ select:focus {
 }
 
 .logo img {
-  width: 10rem;
+  width: auto;
+  height: 3.5rem;
 }
 
 .language-select {
@@ -171,7 +172,7 @@ select:focus {
   border-radius: 2px;
   text-decoration: none;
   font-size: 1.25rem;
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255, 255, 255, .75);
 }
 
 /* - - - - - Hero - - - - - */
@@ -303,18 +304,80 @@ select:focus {
   font-size: .625rem;
 }
 
-@media only screen and (min-width: 38em) {
+@media only screen and (max-height: 44em) {
+  
+  .masthead {
+    padding-top: 1.5rem;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hero-content .headline,
+  .hero-content .byline {
+    grid-column: 1 / span 10;
+  }
+
+  .hero::after {
+    width: 75%;
+  }
 
   .hero-content .headline {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-height: 30em) {
+
+    .hero::after {
+      width: 55%;
+    }
+   
+    .hero::before {
+      display: block;
+    }
+  
   }
 
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (max-height: 400px) and (max-width: 600px) {
 
+  .hero-content .headline {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+  
+  .hero-content .headline {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-height: 48em) {
+  
+    .hero::after {
+      width: 55%;
+    }
+
+    .hero::before {
+      display: block;
+    }
+  
+    .hero-content .headline {
+      font-size: 2rem;
+    }
+  
+  }  
+  
+}
+
+@media only screen and (min-width: 48em) {
+  
   .logo img {
-    width: 15rem;
+    height: 5rem;
   }
 
   .hero-content {
@@ -357,7 +420,7 @@ select:focus {
 
   .hero-content .headline,
   .hero-content .byline {
-    grid-column: 1 / span 7;
+    grid-column: 1 / span 8;
   }
 
 }
