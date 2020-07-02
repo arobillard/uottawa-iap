@@ -356,7 +356,7 @@ select:focus {
     font-size: 3rem;
   }
 
-  @media only screen and (max-height: 48em) {
+  @media only screen and (max-height: 45em) {
   
     .hero::after {
       width: 55%;
