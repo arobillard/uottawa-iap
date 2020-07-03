@@ -1,0 +1,24 @@
+destination: ./compiled
+permalink: pretty
+sass:
+  style: extended
+
+collections:
+  hoop-1:
+    output: true
+    permalink: /:collection/:path/
+  hoop-2:
+    output: false
+    permalink: /:collection/:path/
+  hoop-3:
+    output: false
+    permalink: /:collection/:path/
+  hoop-4:
+    output: false
+    permalink: /:collection/:path/
+  milestones:
+    output: true
+    permalink: /:collection/:path/
+  reports:
+    output: false
+    permalink: /:collection/:path/

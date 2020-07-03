@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+
+<head>
+  <meta charset="utf-8">
+  {% if page.lang == 'fr' %}
+    <title>Plan d'action autochtones | uOttawa | Université d'Ottawa</title>
+    <meta name="description"
+      content="Site web du Plan d’action autochtone de l’Université d’Ottawa à venir à l’automne 2020">
+    <meta name="handheldfriendly" content="true">
+    <meta name="mobileoptimized" content="240">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Geotagging -->
+    <meta name="ICBM" content="45.416667,-75.7">
+    <meta name="geo.position" content="45.416667;-75.7">
+    <meta name="geo.region" content="ca-on">
+    <meta name="geo.placename" content="Ottawa">
+    <!-- Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr">
+    <meta property="og:title" content="Plan d'action autochtones">
+    <meta property="og:url" content="https://plandaction.uottawa.ca">
+    <meta property="og:image" content="../images/social-image.jpg">
+    <meta property="og:site_name" content="Plan d'action autochtones">
+    <meta property="og:description"
+      content="Site web du Plan d’action autochtone de l’Université d’Ottawa à venir à l’automne 2020">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Plan d'action autochtones">
+    <meta name="twitter:url" content="https://plandaction.uottawa.ca">
+    <meta name="twitter:description"
+      content="Site web du Plan d’action autochtone de l’Université d’Ottawa à venir à l’automne 2020">
+    <meta name="twitter:image" content="../images/social-image.jpg">
+  {% else %}
+    <meta name="description" content="Future site of the University of Ottawa Indigenous Action Plan">
+    <meta name="handheldfriendly" content="true">
+    <meta name="mobileoptimized" content="240">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Geotagging -->
+    <meta name="ICBM" content="45.416667,-75.7">
+    <meta name="geo.position" content="45.416667;-75.7">
+    <meta name="geo.region" content="ca-on">
+    <meta name="geo.placename" content="Ottawa">
+    <!-- Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:title" content="Indigenous Action Plan">
+    <meta property="og:url" content="https://actionplan.uottawa.ca">
+    <meta property="og:image" content="{{site.baseurl}}/images/social-image.jpg">
+    <meta property="og:site_name" content="Indigenous Action Plan">
+    <meta property="og:description" content="Future site of the University of Ottawa Indigenous Action Plan">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Indigenous Action Plan">
+    <meta name="twitter:url" content="https://actionplan.uottawa.ca">
+    <meta name="twitter:description" content="Future site of the University of Ottawa Indigenous Action Plan">
+    <meta name="twitter:image" content="{{site.baseurl}}/images/social-image.jpg">
+  {% endif %}
+  <!-- Styles -->
+  <link href="{{site.baseurl}}/css/main.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body id="top">
+  
+  {% include patterns/header.liquid %}
+  
+  <main id="main" role="main">
+    {{ content }}
+  </main>
+
+  {% include patterns/footer.liquid %}
+  
+  <script type="application/jd+json">
+    {
+      "@context": "https://schema.org",
+      "@id": "#uottawa-indigenous-resource-centre",
+      "@type": "Organization",
+      "legalName": "Mashkawazìwogamig: Indigenous Resource Centre (IRC)",
+      "parentOrganization": "University of Ottawa",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ottawa",
+        "addressRegion": "ON",
+        "addressCountry": "CA",
+        "streetAddress": "1 Stewart Street, (1st Floor - Room 130)",
+        "postalCode": "K1N 6N5"
+      },
+      "email": "arc-cra@uOttawa.ca",
+      "tel": "613-562-5800 ext. 2496",
+      "website": "https://www.uottawa.ca/indigenous/",
+      "sameAs": [
+        "https://www.facebook.com/uottawa",
+        "https://twitter.com/uottawa",
+        "https://www.instagram.com/uottawa/?hl=en",
+        "https://www.linkedin.com/school/uottawa/",
+        "https://www.youtube.com/uottawa"
+      ]
+    }
+  </script>
+</body>
+
+</html>

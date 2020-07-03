@@ -1,0 +1,87 @@
+/* - - - - - Footer - - - - - */
+
+.footer {
+  padding: 3.125rem 0;
+  background-color: var(--color-grey);
+  color: #fff;
+}
+
+.footer .wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 1.3rem;
+  row-gap: 2.6rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.footer a,
+[class*="icon"] {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a img {
+  width: 100%;
+  max-width: 85%;
+}
+
+.icon-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.footer .icon-wrap {
+  max-width: 17rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer .icon-wrap p {
+  font-size: .875rem;
+}
+
+.icon-download {
+  width: 4rem;
+  height: 4rem;
+  margin-right: .65rem;
+  flex-shrink: 0;
+  background-image: url(../images/icon-ring.svg);
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.i-download {
+  width: 1.5rem;
+  margin-bottom: .125rem;
+}
+
+.i-download img {
+  width: 100%;
+}
+
+.i-download + .icon-label {
+  font-size: .625rem;
+}
+
+@media only screen and (min-width: 48em) {
+
+  .footer .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-end;
+    justify-items: flex-start;
+    text-align: left;
+  }
+
+}

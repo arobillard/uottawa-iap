@@ -1,0 +1,157 @@
+/* - - - - - Hero - - - - - */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../images/banner-birch-35.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero::after,
+.hero::before {
+  content: ' ';
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hero::after {
+  background-image: url(../images/graphic-wigwam-1.svg);
+  background-size: 100% auto;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  right: 0;
+}
+
+.hero::before {
+  background-image: url(../images/graphic-bark.svg);
+  background-size: 100% auto;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  width: 20%;
+  left: 1.3rem;
+  bottom: 2.6rem;
+  display: none;
+}
+
+.hero-content .headline {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.hero-content .byline {
+  font-size: 1.75rem;
+  color: var(--color-red);
+}
+
+@media only screen and (max-height: 44em) {
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hero-content .headline,
+  .hero-content .byline {
+    grid-column: 1 / span 10;
+  }
+
+  .hero::after {
+    width: 75%;
+  }
+
+  .hero-content .headline {
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-height: 30em) {
+
+    .hero::after {
+      width: 55%;
+    }
+   
+    .hero::before {
+      display: block;
+    }
+  
+  }
+
+}
+
+@media only screen and (max-height: 400px) and (max-width: 600px) {
+
+  .hero-content .headline {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+  
+  .hero-content .headline {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-height: 44em) {
+  
+    .hero::after {
+      width: 55%;
+    }
+
+    .hero::before {
+      display: block;
+    }
+  
+    .hero-content .headline {
+      font-size: 2rem;
+    }
+  
+  }  
+  
+}
+
+@media only screen and (min-width: 48em) {
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hero-content .headline,
+  .hero-content .byline {
+    grid-column: 1 / span 10;
+  }
+
+  .hero::after {
+    width: 55%;
+  }
+
+  .hero::before {
+    display: block;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .hero-content .headline,
+  .hero-content .byline {
+    grid-column: 1 / span 8;
+  }
+
+}
+
+@media only screen and (min-width: 70em) {
+
+  .hero-content .headline,
+  .hero-content .byline {
+    grid-column: 1 / span 8;
+  }
+
+}

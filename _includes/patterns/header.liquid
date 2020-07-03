@@ -1,0 +1,10 @@
+<header id="header" class="masthead" role="banner">
+  <div class="wrapper gutter grid-flex-split grid-flex-v-top">
+    <a href="{{site.baseurl}}{% if page.lang == 'fr' %}fr{% endif %}" class="logo">
+      <h1><img src="{{site.baseurl}}/images/{% if page.lang == 'fr' %}logo-iap-fr{% else %}logo-iap{% endif %}.svg" alt="{% if page.lang == 'fr' %}Plan d'action autochtones{% else %}Indigenous Action Plan{% endif %}"></h1>
+    </a>
+    {% include utilities/nav.liquid %}
+    <a href="{{site.baseurl}}{% if page.lang != 'fr' %}/fr{% endif %}{{ page.url }}" class="language-select"
+      aria-label="{% if page.lang == 'fr' %}English (switch to English version of this page){% else %}Français (passer à la version française de cette page){% endif %}">{% if page.lang == 'fr' %}EN{% else %}FR{% endif %}</span></a>
+  </div>
+</header>

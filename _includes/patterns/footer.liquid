@@ -1,0 +1,21 @@
+<footer id="footer" class="footer" role="contentinfo">
+  <div class="wrapper gutter">
+    <a href="https://www.uottawa.ca/{% if page.lang == 'fr' %}fr{% else %}en{% endif %}" class="logo-uottawa">
+      <img src="{{site.baseurl}}/images/logo-uOttawa.svg" alt="{% if page.lang == 'fr' %}Université d'{% else %}University of {% endif %}Ottawa">
+    </a>
+    <div>
+      <a href="https://www.uottawa.ca/{% if page.lang == 'fr' %}autochtone{% else %}indigenous{% endif %}/" class="logo-ia">
+        <img src="{{site.baseurl}}/images/logo-ia.svg" alt="{% if page.lang == 'fr' %}Affaires autochtones{% else %}Indigenous Affairs{% endif %}">
+      </a>
+    </div>
+    <a class="icon-wrap" href="{{site.baseurl}}/content/UO-20-IAP-{% if page.lang == 'fr' %}Fr{% else %}EN{% endif %}.pdf" download>
+      <div class="icon-download">
+        <i class="icon i-download">
+          <img src="{{site.baseurl}}/images/icon-download.svg" alt="{% if page.lang == 'fr' %}Téléchargez{% else %}Download{% endif %}">
+        </i>
+        <span class="icon-label">6.4&nbsp;MB</span>
+      </div>
+      <p class="push-0">{% if page.lang == 'fr' %}Téléchargez le Plan d’action autochtones en format PDF{% else %}Download the Indigenous Action Plan as PDF{% endif %}</p>
+    </a>
+  </div>
+</footer>
