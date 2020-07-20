@@ -6,7 +6,7 @@
   color: #fff;
 }
 
-.footer .wrapper {
+.footer .wrapper:not(.nav-footer-wrap) {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 1.3rem;
@@ -75,9 +75,21 @@
   font-size: .625rem;
 }
 
+.nav-footer {
+  text-align: center;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
 @media only screen and (min-width: 48em) {
 
-  .footer .wrapper {
+  .footer .wrapper:not(.nav-footer-wrap) {
     grid-template-columns: repeat(3, 1fr);
     align-items: flex-end;
     justify-items: flex-start;

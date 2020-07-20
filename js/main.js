@@ -1,3 +1,11 @@
+const footNavWrap = document.querySelector('.nav-footer-wrap');
+
+footNavWrap.classList.add('hidden');
+
+function wait(ms = 0) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 const accBtn = document.querySelectorAll('.hoop-accordion-button');
 
 function wait(ms = 0) {
@@ -33,7 +41,7 @@ function handleAccBtnClick(e) {
   openAccordion(target, e);
 }
 
-if (accBtn) {
+if (accBtn.length > 0) {
   const id = window.location.hash;
 
   if (id) {
@@ -51,7 +59,7 @@ if (accBtn) {
 
 // Smooth Scroll
 
-const links = document.querySelectorAll('[href^="#"');
+const links = document.querySelectorAll('[href^="#"]:not(.nav-toggle):not(.skip-link)');
 
 async function smoothScroll(e) {
   e.preventDefault();
@@ -66,8 +74,111 @@ async function smoothScroll(e) {
 }
 
 links && links.forEach(link => {
+  console.log(link)
   link.addEventListener('click', smoothScroll);
   // if (link.classList.contains('hoop-accordion-button')) {
   //   link.addEventListener('focus', smoothScroll);
   // }
 });
+
+// Toggle Nav
+
+async function asyncForEach(array, callback) {
+  for (let index = 0; index < array.length; index++) {
+    await callback(array[index], index, array);
+  }
+}
+
+const masthead = document.querySelector('.masthead');
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+const navLinks = Array.from(document.querySelectorAll('.nav > ul > li > a'));
+
+async function openNav() {
+  masthead.classList.add('open');
+  navToggle.classList.add('nav-toggle-transition');
+  setTimeout(async function () {
+    navToggle.querySelector('.middle').style.display = 'none';
+    navToggle.classList.add('nav-toggle-open');
+    navToggle.classList.remove('nav-toggle-transition');
+    asyncForEach(navLinks, async (num) => {
+      await wait(50);
+      num.classList.add('transitioned');
+    })
+  }, 200)
+}
+
+function closeNav() {
+  navToggle.classList.add('nav-toggle-transition');
+  navToggle.classList.remove('nav-toggle-open');
+  navLinks.forEach(link => {
+    link.classList.remove('transitioned');
+  });
+  setTimeout(() => {
+    navToggle.classList.remove('nav-toggle-transition');
+    navToggle.querySelector('.middle').removeAttribute('style');
+    masthead.classList.remove('open');
+  }, 200)
+}
+
+function handleNavToggle(e) {
+  e.preventDefault();
+  if (masthead.classList.contains('open')) {
+    closeNav()
+  } else {
+    openNav()
+  }
+
+}
+
+navToggle && navToggle.addEventListener('click', handleNavToggle);
+
+// Framework Interaction
+
+const fwLinks = Array.from(document.querySelectorAll('.hoop-list a'));
+const fwHoops = Array.from(document.querySelectorAll('[id*="fw-hoop"]'));
+const fwWrap = document.querySelector('.framework-structure-wrap');
+
+function highlightHoop(e) {
+  const ref = `#fw-${e.currentTarget.classList[0]}`;
+  const hoop = document.querySelector(ref);
+  hoop.classList.add('hoop-hovered');
+  fwWrap.classList.add('engaged');
+}
+
+function unhighlightHoop(e) {
+  const ref = `#fw-${e.currentTarget.classList[0]}`;
+  const hoop = document.querySelector(ref);
+  hoop.classList.remove('hoop-hovered')
+  fwWrap.classList.remove('engaged');
+}
+
+function highlightHoopLink(e) {
+  const ref = e.currentTarget.classList[0];
+  const link = document.querySelector(`.hoop-list .${ref}`);
+  link.classList.add('hoop-hovered');
+}
+
+function unhighlightHoopLink(e) {
+  const ref = e.currentTarget.classList[0];
+  const link = document.querySelector(`.hoop-list .${ref}`);
+  link.classList.remove('hoop-hovered')
+}
+
+function navigateHoop(e) {
+  const ref = e.currentTarget.classList[0];
+  window.location.href = `/${ref}`;
+}
+
+fwLinks.forEach(link => {
+  link.addEventListener('mouseover', highlightHoop);
+  link.addEventListener('mouseout', unhighlightHoop);
+  link.addEventListener('focusin', highlightHoop);
+  link.addEventListener('focusout', unhighlightHoop);
+})
+
+fwHoops.forEach(link => {
+  link.addEventListener('mouseover', highlightHoopLink);
+  link.addEventListener('mouseout', unhighlightHoopLink);
+  link.addEventListener('click', navigateHoop);
+})

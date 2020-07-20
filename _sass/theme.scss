@@ -33,3 +33,122 @@
 .cerceau-4 {
   --color-hoop: var(--color-red);
 }
+
+.updates {
+  --color-hoop: var(--color-tan);
+}
+
+.home #background {
+  background-image: url('/images/bg-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.framework-structure-wrap {
+  position: relative;
+  &.engaged,
+  &:hover,
+  &:focus {
+    [id*="fw-hoop"],
+    .ties,
+    .structure,
+    a {
+      transition: opacity .2s;
+      opacity: .5;
+    }
+    [id*="fw-hoop"]:hover,
+    [id*="fw-hoop"]:focus,
+    a:hover,
+    a:focus {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+  .hoop-hovered {
+   opacity: 1!important; 
+  }
+}
+
+.framework-structure {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.hoop-list {
+  display: none;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  list-style-type: none;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-60%);
+  height: 60%;
+  a {
+    color: var(--color-hoop);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  &:hover + .framework-structure,
+  &:focus + .framework-structure {
+    [class*="hoop"] {
+      opacity: .5;
+    }
+  }
+}
+
+@media only screen and (min-width: 38em) {
+
+  .home #introduction {
+    background-image: url('/images/g-home-intro.svg');
+    background-position: left bottom;
+    background-size: 33.333%;
+    background-repeat: no-repeat;
+  }
+
+  .home #background {
+    background-image:
+      url('/images/g-birch-2-groups.svg'),
+      url('/images/g-dots-swoosh.svg'),
+      url('/images/bg-background.jpg');
+    background-position:
+      2.6rem 80%,
+      -1.3rem 7.8rem,
+      center;
+    background-size:
+      25% auto,
+      30% auto,
+      cover;
+    background-repeat: no-repeat;
+  }
+
+  .framework-structure {
+    width: 50%;
+  }
+
+  .hoop-list {
+    display: flex;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .hoop-list {
+    right: 10%;
+  }
+
+}
+
+@media only screen and (min-width: 85em) {
+
+  .home #introduction {
+    background-position: left 1.3rem;
+    // background-size: auto 90%;
+  }
+
+}

@@ -1,0 +1,36 @@
+.hoop-prev {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: calc(3rem * var(--line-height));
+  h3 {
+    text-transform: uppercase;
+  }
+  h3, h4, a {
+    color: var(--color-hoop);
+    margin: 0;
+  }
+  a {
+    font-weight: bold;
+  }
+  .hoop-prev-header {
+    border-bottom: 5px solid var(--color-hoop);
+  }
+  p {
+    flex-grow: 2;
+  }
+}
+
+@media only screen and (min-width: 38em) {
+
+  .hoop-prev .hoop-prev-header {
+    border-width: 20px;
+  }
+
+}
+@media only screen and (min-width: 60em) {
+ 
+  .hoop-prev-header {
+    min-height: 9.5rem;
+  }
+
+}

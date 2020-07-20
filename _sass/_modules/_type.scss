@@ -26,7 +26,28 @@ a {
   transition:
     opacity .2s,
     color .2s,
+    transform .2s,
     background-color .2s;
 }
 
+p + p:last-child {
+  margin-bottom: 0;
+}
 
+h2 {
+  color: var(--color-grey);
+  font-size: 2.5rem;
+  font-weight: 500;
+  &:not(.headline) span {
+    display: block;
+    font-weight: 400;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+.text-center {
+  text-align: center;
+}

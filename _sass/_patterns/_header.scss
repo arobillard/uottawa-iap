@@ -9,22 +9,21 @@
   z-index: 10000;
 }
 
-.footer a:hover,
-.masthead a:hover {
-  opacity: .5;
-}
-
 .logo {
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
-.logo h1 {
+.logo h1,
+.logo strong {
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
   width: auto;
-  height: 3.5rem;
+  height: 2.5rem;
 }
 
 .language-select {
@@ -39,19 +38,136 @@
   background-color: rgba(255, 255, 255, .75);
 }
 
-@media only screen and (max-height: 44em) {
-  
-  .masthead {
-    padding-top: 1.5rem;
+.nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: var(--color-hoop);
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+    }
+    strong {
+      font-size: 1.25rem;
+      text-transform: none;
+      font-weight: 700;
+    }
   }
-
 }
 
-
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 64.999em) {
   
+  .masthead {
+    position: fixed;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #fff;
+    border-bottom: 2px solid var(--color-red);
+    .wrapper {
+      align-items: center;
+    }
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-100%);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    z-index: -1;
+    transition:
+      transform .2s;
+    a {
+      opacity: 0;
+      transform: translateY(2rem);
+      font-size: 1.5rem;
+      &.transitioned {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .nav-highlight {
+        display: none;
+      }
+    }
+  }
+
+  .open .nav {
+    transform: translateY(0);
+  }
+
+  .language-select {
+    margin-left: auto;
+  }
+  
+}
+
+@media only screen and (min-width: 65em) {
+
+  .masthead {
+    padding-top: 3.125rem;
+  }
+
+  .footer a:hover,
+  .masthead a:hover {
+    opacity: .5;
+  }
+
+  .language-select {
+    margin-top: -.75rem;
+  }
+
+  .nav {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li:not(:last-child) {
+        margin-right: 1rem;
+      }
+      a {
+        color: var(--color-grey);
+        position: relative;
+        &[aria-current="page"],
+        &:hover {
+          color: var(--color-grey);
+          opacity: 1;
+          .nav-highlight {
+            left: -.25rem;
+            opacity: 1;
+          }
+        }
+        strong {
+          font-size: .875rem;
+        }
+        .nav-highlight {
+          width: 3rem;
+          position: absolute;
+          bottom: -.5rem;
+          left: 1rem;
+          opacity: 0;
+          z-index: -1;
+          color: var(--color-hoop);
+          transition:
+            left .2s,
+            opacity .2s;
+        }
+      }
+    }
+  }
+
   .logo img {
-    height: 5rem;
+    height: 3.5rem;
   }
 
 }

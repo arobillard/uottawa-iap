@@ -68,6 +68,11 @@ svg:not(:root) {
 
 /* - - - - - Grids - - - - - */
 
+[class*="grid"] {
+  display: grid;
+  column-gap: 1.3rem;
+}
+
 [class*="grid-flex"] {
   display: flex;
   flex-wrap: wrap;
@@ -81,6 +86,34 @@ svg:not(:root) {
   align-items: flex-start;
 }
 
+.col-r-2-3 {
+  grid-column: 2 / 4;
+}
+
+@media only screen and (min-width: 38em) {
+
+  .grid-m-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-m-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .grid-l-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-l-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
 /* - - - - - Layouts - - - - - */
 
 .wrapper {
@@ -90,6 +123,10 @@ svg:not(:root) {
 }
 
 /* - - - - - Displays - - - - - */
+
+.block {
+  display: block;
+}
 
 .hidden {
   display: none;

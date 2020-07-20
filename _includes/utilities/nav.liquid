@@ -1,9 +1,41 @@
 <nav id="{{ include.id | default: 'nav' }}" class="{{ include.class | default: 'nav' }}">
   <ul>
-    <li><a href="/hoop-1">Hoop 1</a></li>
-    <li><a href="/hoop-2">Hoop 2</a></li>
-    <li><a href="/hoop-3">Hoop 3</a></li>
-    <li><a href="/hoop-4">Hoop 4</a></li>
-    <li><a href="/updates">Updates</a></li>
+    {% if page.lang == 'fr' %}
+    {% else %}
+      <li>
+        <a class="hoop-1" {% if page.url contains 'hoop-1' %}aria-current="page"{% endif %} href="/hoop-1">
+          Hoop 1
+          <strong class="block">The Institution</strong>
+          {% include utilities/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="hoop-2" {% if page.url contains 'hoop-2' %}aria-current="page"{% endif %} href="/hoop-2">
+          Hoop 2
+          <strong class="block">Faculties, <span class="break-m">Departments,</span> and Programs</strong>
+          {% include utilities/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="hoop-3" {% if page.url contains 'hoop-3' %}aria-current="page"{% endif %} href="/hoop-3">
+          Hoop 3
+          <strong class="block">The Physical Space</strong>
+          {% include utilities/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="hoop-4" {% if page.url contains 'hoop-4' %}aria-current="page"{% endif %} href="/hoop-4">
+          Hoop 4
+          <strong class="block">Indigenous Community</strong>
+          {% include utilities/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="updates" {% if page.url contains 'updates' %}aria-current="page"{% endif %} href="/updates">
+          Updates
+          {% include utilities/nav-highlight.liquid %}
+        </a>
+      </li>
+    {% endif %}
   </ul>
 </nav>

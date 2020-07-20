@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   {% if page.lang == 'fr' %}
-    <title>Plan d'action autochtones | uOttawa | Université d'Ottawa</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}Plan d'action autochtones | uOttawa | Université d'Ottawa</title>
     <meta name="description"
       content="Site web du Plan d’action autochtone de l’Université d’Ottawa à venir à l’automne 2020">
     <meta name="handheldfriendly" content="true">
@@ -32,7 +32,7 @@
       content="Site web du Plan d’action autochtone de l’Université d’Ottawa à venir à l’automne 2020">
     <meta name="twitter:image" content="../images/social-image.jpg">
   {% else %}
-    <title>Indigenous Action Plan | uOttawa | University of Ottawa</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}Indigenous Action Plan | uOttawa | University of Ottawa</title>
     <meta name="description" content="Future site of the University of Ottawa Indigenous Action Plan">
     <meta name="handheldfriendly" content="true">
     <meta name="mobileoptimized" content="240">
@@ -59,11 +59,13 @@
   {% endif %}
   <!-- Styles -->
   <link href="{{site.baseurl}}/css/main.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,400;0,600;0,700;0,900;1,400;1,600;1,900&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" />
 </head>
 
-<body id="top" class="{{ page.title | downcase | replace: ' ', '-' }}">
+<body id="top" class="{% if page.title %}{{ page.title | downcase | replace: ' ', '-' }}{% elsif page.url == '/' or page.url == '/fr' %}home{% endif %}">
+  
+  {% include patterns/skip-links.liquid %}
   
   {% include patterns/header.liquid %}
   

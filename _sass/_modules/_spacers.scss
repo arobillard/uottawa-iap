@@ -84,6 +84,16 @@
   padding-top: calc(1rem * var(--line-height) * 4);
 }
 
+.pad-t-5,
+.pad-t-b-5 {
+  padding-top: calc(1rem * var(--line-height) * 5);
+}
+
+.pad-t-6,
+.pad-t-b-6 {
+  padding-top: calc(1rem * var(--line-height) * 6);
+}
+
 .pad-b,
 .pad-t-b {
   padding-bottom: calc(1rem * var(--line-height));
@@ -112,6 +122,16 @@
 .pad-b-4,
 .pad-t-b-4 {
   padding-bottom: calc(1rem * var(--line-height) * 4);
+}
+
+.pad-b-5,
+.pad-t-b-5 {
+  padding-bottom: calc(1rem * var(--line-height) * 5);
+}
+
+.pad-b-6,
+.pad-t-b-6 {
+  padding-bottom: calc(1rem * var(--line-height) * 6);
 }
 
 .push {
