@@ -5,7 +5,7 @@ sass:
 
 collections:
   hoop-1:
-    output: true
+    output: false
     permalink: /:collection/:path/
   hoop-2:
     output: false
@@ -22,3 +22,6 @@ collections:
   reports:
     output: false
     permalink: /:collection/:path/
+
+# gems:
+#   - octopress-minify-html

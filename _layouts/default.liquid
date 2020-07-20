@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-ca">
+<html lang="{% if page.lang == 'fr' %}fr{% else %}en-ca{% endif %}">
 
 <head>
   <meta charset="utf-8">
@@ -32,6 +32,7 @@
       content="Site web du Plan d’action autochtone de l’Université d’Ottawa à venir à l’automne 2020">
     <meta name="twitter:image" content="../images/social-image.jpg">
   {% else %}
+    <title>Indigenous Action Plan | uOttawa | University of Ottawa</title>
     <meta name="description" content="Future site of the University of Ottawa Indigenous Action Plan">
     <meta name="handheldfriendly" content="true">
     <meta name="mobileoptimized" content="240">
@@ -58,13 +59,11 @@
   {% endif %}
   <!-- Styles -->
   <link href="{{site.baseurl}}/css/main.css" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" />
 </head>
 
-<body id="top">
+<body id="top" class="{{ page.title | downcase | replace: ' ', '-' }}">
   
   {% include patterns/header.liquid %}
   
@@ -74,6 +73,36 @@
 
   {% include patterns/footer.liquid %}
   
+  <script src="{{site.baseurl}}/js/main.js"></script>
+  {% if page.lang == 'fr' %}
+  <script type="application/jd+json">
+    {
+      "@context": "https://schema.org",
+      "@id": "#uottawa-centre-des-ressources-autochtones",
+      "@type": "Organization",
+      "legalName": "Mashkawazìwogamig : Centre des ressources autochtones (CRA)",
+      "parentOrganization": "Université d'Ottawa",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ottawa",
+        "addressRegion": "ON",
+        "addressCountry": "CA",
+        "streetAddress": "1 rue Stewart, (1er étage - pièce 130)",
+        "postalCode": "K1N 6N5"
+      },
+      "email": "arc-cra@uOttawa.ca",
+      "tel": "613-562-5800 ext. 2496",
+      "website": "https://www.uottawa.ca/autochtones/",
+      "sameAs": [
+        "https://www.facebook.com/uottawa",
+        "https://twitter.com/uottawa",
+        "https://www.instagram.com/uottawa/",
+        "https://www.linkedin.com/school/uottawa/",
+        "https://www.youtube.com/uottawa"
+      ]
+    }
+  </script>
+  {% else %}
   <script type="application/jd+json">
     {
       "@context": "https://schema.org",
@@ -101,6 +130,8 @@
       ]
     }
   </script>
+  {% endif %}
+
 </body>
 
 </html>

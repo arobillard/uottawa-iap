@@ -1,0 +1,37 @@
+{% assign collection = page.title | downcase | replace:' ', '-' %}
+<section class="hoop-content wrapper gutter pad-t-b-4">
+  {% for loop in site[collection] %}
+    <div id="hoop-{{ loop.title | replace:'.', '-' }}" class="hoop-accordion push" tabindex="0">
+      <a class="hoop-accordion-button" href="#hoop-{{ loop.title | replace:'.', '-' }}" aria-label="Click to open Hoop {{ loop.title }}">
+        <h2 class="hoop-accordion-title">
+          <span class="hoop-number">{{ loop.title }}</span>
+          <span class="hoop-title">{{ loop.headline }}</span>
+        </h2>
+      </a>
+      <div class="accordion-content">
+        <div class="accordion-content-grid pad-t-b-2">
+          <h3>Why</h3>
+          <div class="content-block">
+            {{ loop.why | markdownify }}
+          </div>
+          <h3>When</h3>
+          <div class="content-block">
+            {{ loop.when | markdownify }}
+          </div>
+          <h3>How</h3>
+          <div class="content-block">
+            {{ loop.how | markdownify }}
+          </div>
+          <h3>Cost</h3>
+          <div class="content-block">
+            {{ loop.cost | markdownify }}
+          </div>
+          <h3>Who</h3>
+          <div class="content-block">
+            {{ loop.who | markdownify }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
