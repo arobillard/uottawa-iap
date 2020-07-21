@@ -348,7 +348,9 @@ a:focus, [tabindex="0"]:focus, details:focus, summary:focus, input:focus, textar
 
 .framework-structure-wrap { position: relative; }
 
-.framework-structure-wrap.engaged [id*="fw-hoop"], .framework-structure-wrap.engaged .ties, .framework-structure-wrap.engaged .structure, .framework-structure-wrap.engaged a, .framework-structure-wrap:hover [id*="fw-hoop"], .framework-structure-wrap:hover .ties, .framework-structure-wrap:hover .structure, .framework-structure-wrap:hover a, .framework-structure-wrap:focus [id*="fw-hoop"], .framework-structure-wrap:focus .ties, .framework-structure-wrap:focus .structure, .framework-structure-wrap:focus a { transition: opacity .2s; opacity: .5; }
+.framework-structure-wrap [id*="fw-hoop"], .framework-structure-wrap .ties, .framework-structure-wrap .structure { transition: opacity .2s; }
+
+.framework-structure-wrap.engaged [id*="fw-hoop"], .framework-structure-wrap.engaged .ties, .framework-structure-wrap.engaged .structure, .framework-structure-wrap.engaged a, .framework-structure-wrap:hover [id*="fw-hoop"], .framework-structure-wrap:hover .ties, .framework-structure-wrap:hover .structure, .framework-structure-wrap:hover a, .framework-structure-wrap:focus [id*="fw-hoop"], .framework-structure-wrap:focus .ties, .framework-structure-wrap:focus .structure, .framework-structure-wrap:focus a { opacity: .5; }
 
 .framework-structure-wrap.engaged [id*="fw-hoop"]:hover, .framework-structure-wrap.engaged [id*="fw-hoop"]:focus, .framework-structure-wrap.engaged a:hover, .framework-structure-wrap.engaged a:focus, .framework-structure-wrap:hover [id*="fw-hoop"]:hover, .framework-structure-wrap:hover [id*="fw-hoop"]:focus, .framework-structure-wrap:hover a:hover, .framework-structure-wrap:hover a:focus, .framework-structure-wrap:focus [id*="fw-hoop"]:hover, .framework-structure-wrap:focus [id*="fw-hoop"]:focus, .framework-structure-wrap:focus a:hover, .framework-structure-wrap:focus a:focus { cursor: pointer; opacity: 1; }
 

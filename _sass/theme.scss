@@ -47,6 +47,11 @@
 
 .framework-structure-wrap {
   position: relative;
+  [id*="fw-hoop"],
+  .ties,
+  .structure {
+    transition: opacity .2s;
+  }
   &.engaged,
   &:hover,
   &:focus {
@@ -54,7 +59,6 @@
     .ties,
     .structure,
     a {
-      transition: opacity .2s;
       opacity: .5;
     }
     [id*="fw-hoop"]:hover,
