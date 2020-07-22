@@ -59,11 +59,11 @@
   {% endif %}
   <!-- Styles -->
   <link href="{{site.baseurl}}/css/main.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,400;0,600;0,700;0,900;1,400;1,600;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" />
 </head>
 
-<body id="top" class="{% if page.title %}{{ page.title | downcase | replace: ' ', '-' }}{% elsif page.url == '/' or page.url == '/fr' %}home{% endif %}">
+<body id="top" class="{% if page.title %}{{ page.title | downcase | replace: ' ', '-' }}{% elsif page.url == '/' or page.url == '/fr' %}home{% endif %} no-js">
   
   {% include patterns/skip-links.liquid %}
   
@@ -74,6 +74,8 @@
   </main>
 
   {% include patterns/footer.liquid %}
+  
+  {% include patterns/to-top.liquid %}
   
   <script src="{{site.baseurl}}/js/main.js"></script>
   {% if page.lang == 'fr' %}

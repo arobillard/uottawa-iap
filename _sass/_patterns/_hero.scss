@@ -2,6 +2,7 @@
 
 .hero {
   height: 100vh;
+  max-height: 900px;
   display: flex;
   align-items: center;
   background-image: url(../images/banner-birch-35.jpg);
@@ -52,6 +53,7 @@
   }
   .headline-byline {
     display: block;
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--color-grey);
   }
@@ -79,6 +81,35 @@
   font-size: 1.5rem;
 }
 
+.hero-milestone {
+  height: 50vh;
+  max-height: 400px;
+  display: flex;
+  align-items: flex-end;
+  background-position: right bottom;
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  &.milestone-hoop-1 {
+    background-color: var(--color-green-30);
+    background-image: url('/images/hoop-deco-1.svg');
+  }
+  &.milestone-hoop-2 {
+    background-color: var(--color-orange-30);
+    background-image: url('/images/hoop-deco-2.svg');
+  }
+  &.milestone-hoop-3 {
+    background-color: var(--color-brown-30);
+    background-image: url('/images/hoop-deco-3.svg');
+  }
+  &.milestone-hoop-4 {
+    background-color: var(--color-red-30);
+    background-image: url('/images/hoop-deco-4.svg');
+  }
+  .headline {
+    max-width: 40rem;
+  }
+}
+
 @media only screen and (max-height: 44em) {
 
   // .hero-content {
@@ -97,6 +128,9 @@
 
   .hero-content .headline {
     font-size: 2rem;
+    .headline-byline {
+      font-size: 1.5rem;
+    }
   }
 
   @media only screen and (max-height: 30em) {
@@ -117,6 +151,9 @@
 
   .hero-content .headline {
     font-size: 1.5rem;
+    .headline-byline {
+      font-size: 1.125rem;
+    }
   }
 
 }
@@ -125,6 +162,9 @@
   
   .hero-content .headline {
     font-size: 3rem;
+    .headline-byline {
+      font-size: 2.25rem;
+    }
   }
 
   @media only screen and (max-height: 44em) {
@@ -139,6 +179,9 @@
   
     .hero-content .headline {
       font-size: 2rem;
+      .headline-byline {
+        font-size: 1.5rem;
+      }
     }
   
   }  

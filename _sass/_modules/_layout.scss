@@ -122,6 +122,11 @@ svg:not(:root) {
   margin: 0 auto;
 }
 
+.wrapper-narrow-no-center {
+  max-width: 45em;
+  width: 100%;
+}
+
 /* - - - - - Displays - - - - - */
 
 .block {

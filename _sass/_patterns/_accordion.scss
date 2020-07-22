@@ -14,7 +14,7 @@
     text-decoration: none;
 
     .hoop-accordion-title {
-      font-weight: 600;
+      color: #fff;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       column-gap: 1.3rem;
@@ -23,9 +23,11 @@
       .hoop-number {
         display: block;
         text-align: right;
+        font-weight: 600;
       }
       .hoop-title {
         grid-column: 2 / span 11;
+        font-weight: 600;
       }
     }
   }
@@ -39,6 +41,7 @@
       column-gap: 1.3rem;
       align-items: baseline;
       h3 {
+        font-size: 1.125rem;
         grid-column: 1 / span 2;
         text-align: right;
         color: var(--color-hoop);
@@ -73,4 +76,10 @@
       }
     }
   }
+}
+
+.no-js {
+  .hoop-accordion .accordion-content {
+    max-height: none;
+  } 
 }

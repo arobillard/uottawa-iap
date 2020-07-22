@@ -1,6 +1,11 @@
-const footNavWrap = document.querySelector('.nav-footer-wrap');
+const body = document.querySelector('body');
+const masthead = document.querySelector('.masthead');
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+const navLinks = Array.from(document.querySelectorAll('.nav > ul > li > a'));
+const toTop = document.querySelector('.to-top');
 
-footNavWrap.classList.add('hidden');
+body.classList.remove('no-js');
 
 function wait(ms = 0) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -89,11 +94,6 @@ async function asyncForEach(array, callback) {
   }
 }
 
-const masthead = document.querySelector('.masthead');
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav');
-const navLinks = Array.from(document.querySelectorAll('.nav > ul > li > a'));
-
 async function openNav() {
   masthead.classList.add('open');
   navToggle.classList.add('nav-toggle-transition');
@@ -132,6 +132,21 @@ function handleNavToggle(e) {
 }
 
 navToggle && navToggle.addEventListener('click', handleNavToggle);
+
+// Sticky Nav
+
+function stickyNav(e) {
+  if (window.pageYOffset >= 50) {
+    masthead.classList.add('sticky');
+    toTop.classList.add('sticky');
+  } else {
+    masthead.classList.remove('sticky');
+    toTop.classList.remove('sticky');
+  }
+}
+
+window.addEventListener('scroll', stickyNav);
+stickyNav();
 
 // Framework Interaction
 
