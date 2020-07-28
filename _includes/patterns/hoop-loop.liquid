@@ -1,11 +1,14 @@
 {% assign collection = page.title | downcase | replace:' ', '-' %}
 <section class="hoop-content wrapper gutter pad-t-4 pad-b-2">
   {% for loop in site[collection] %}
-    <div id="hoop-{{ loop.title | replace:'.', '-' }}" class="hoop-accordion push" tabindex="0">
+    <div id="hoop-{{ loop.title | replace:'.', '-' }}" class="hoop-accordion push">
       <a class="hoop-accordion-button" href="#hoop-{{ loop.title | replace:'.', '-' }}" aria-label="Click to open Hoop {{ loop.title }}">
         <h2 class="hoop-accordion-title">
           <span class="hoop-number">{{ loop.title }}</span>
           <span class="hoop-title">{{ loop.headline }}</span>
+          <span class="hoop-plus-icon">
+            {% include graphics/hoop-plus-icon.liquid %}
+          </span>
         </h2>
       </a>
       <div class="accordion-content">

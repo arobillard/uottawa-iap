@@ -26,8 +26,24 @@
         font-weight: 600;
       }
       .hoop-title {
-        grid-column: 2 / span 11;
+        grid-column: 2 / span 10;
         font-weight: 600;
+      }
+      .hoop-plus-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 100%;
+          max-width: 2rem;
+          color: #fff;
+          transition: transform .2s;
+        }
+      }
+    }
+    &.open {
+      svg {
+        transform: rotate(45deg);
       }
     }
   }
@@ -48,6 +64,10 @@
       }
       .content-block {
         grid-column: 3 / span 9;
+        padding-bottom: 1.3rem;
+        p + p:last-child {
+          margin-bottom: 1.3rem;
+        }
       }
     }
   }
@@ -64,6 +84,9 @@
           display: block;
           margin-bottom: .65rem;
         }
+        .hoop-plus-icon {
+          display: none;
+        }
       }
     }
     .accordion-content .accordion-content-grid {
@@ -77,6 +100,10 @@
     }
   }
 }
+
+// .hoop-3 .hoop-accordion-title svg {
+//   color: var(--color-brown-30)!important;
+// }
 
 .no-js {
   .hoop-accordion .accordion-content {

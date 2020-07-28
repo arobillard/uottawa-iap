@@ -1,0 +1,28 @@
+---
+layout: default
+title: Reports
+---
+{%- capture reportCheck -%}{% for report in site.reports limit:4 %}{%- if report.title -%}1{% break %}{%- endif -%}{% endfor%}{%- endcapture -%}
+
+{% include patterns/hero-basic.liquid headline='Reports' %}
+
+{% assign reports_in_order = site.reports | sort: "order" %}
+<section id="reports" tabindex="0">
+  <div class="wrapper gutter pad-t-b-6 grid-s-2 grid-m-3">
+    {%- if reportCheck != '' -%}
+    {% for report in reports_in_order reversed limit:2 %}
+    <a class="col-update push-2" href="/images/{{ report.pdfLink }}">
+      <div class="report-img push">
+        <img src="{{ report.coverImg }}" alt="{{ report.title }}">
+      </div>
+      <h3 class="push-1-2">{{ report.title }}</h3>
+      <p>{{ report.pubDate }}</p>
+    </a>
+    {% endfor %}
+    {%- else -%}
+    <p>No updates have been released.</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% include patterns/hoop-graphic-deco.liquid hoopNum="6" %}

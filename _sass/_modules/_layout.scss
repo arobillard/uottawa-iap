@@ -68,9 +68,9 @@ svg:not(:root) {
 
 /* - - - - - Grids - - - - - */
 
-[class*="grid"] {
+[class*="grid-s"] {
   display: grid;
-  column-gap: 1.3rem;
+  grid-template-columns: 1fr;
 }
 
 [class*="grid-flex"] {
@@ -90,7 +90,21 @@ svg:not(:root) {
   grid-column: 2 / 4;
 }
 
+@media only screen and (min-width: 25em) {
+
+  .grid-s-2 {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.3rem;
+  }
+
+}
+
 @media only screen and (min-width: 38em) {
+
+  [class*="grid-m"] {
+    display: grid;
+    column-gap: 1.3rem;
+  }
 
   .grid-m-2 {
     grid-template-columns: repeat(2, 1fr);

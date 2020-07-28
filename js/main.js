@@ -26,6 +26,7 @@ function openAccordion(target, e) {
       e.preventDefault();
     }
     content.classList.remove('open');
+    target.classList.remove('open');
     content.removeAttribute('style');
 
   } else {
@@ -33,11 +34,13 @@ function openAccordion(target, e) {
     Array.from(accBtn).forEach(btn => {
       btn.nextElementSibling.classList.remove('open');
       btn.nextElementSibling.removeAttribute('style');
+      btn.classList.remove('open');
     });
 
-    content.classList.toggle('open');
+    content.classList.add('open');
     content.setAttribute('style', `max-height: ${contentHeight}px`);
     target.focus();
+    target.classList.add('open');
   }
 }
 

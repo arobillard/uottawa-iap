@@ -26,7 +26,7 @@
     width: auto;
     text-align: center;
     top: 150%;
-    background-color: var(--color-green);
+    background-color: var(--color-hoop);
     color: #fff;
   }
   &-bg {
@@ -35,6 +35,9 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    .bg {
+      color: var(--color-hoop);
+    }
   }
   &:hover,
   &:focus {

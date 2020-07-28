@@ -1,0 +1,86 @@
+a.col-update {
+  display: block;
+  text-decoration: none;
+  h3 {
+    color: var(--color-grey);
+  }
+}
+
+[class*="milestone-header"] {
+  display: flex;
+  align-items: flex-end;
+  background-position: 200% bottom;
+  background-size: 75% auto;
+  background-repeat: no-repeat;
+}
+
+.report-img {
+  padding-top: 130%;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.milestone-header-1 {
+  background-color: var(--color-green-light);
+  background-image: url('/images/hoop-deco-1.svg');
+}
+.milestone-header-2 {
+  background-color: var(--color-orange-light);
+  background-image: url('/images/hoop-deco-2.svg');
+}
+.milestone-header-3 {
+  background-color: var(--color-brown-light);
+  background-image: url('/images/hoop-deco-3.svg');
+}
+.milestone-header-4 {
+  background-color: var(--color-red-light);
+  background-image: url('/images/hoop-deco-4.svg');
+}
+
+@media only screen and (min-width: 30em) {
+
+  #reports .grid-updates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.3rem;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  #reports .grid-updates {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1.3rem;
+  }
+
+}
+
+@media only screen and (min-width: 44em) {
+
+  #reports .grid-updates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.3rem;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .grid-updates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.3rem;
+  }
+
+}

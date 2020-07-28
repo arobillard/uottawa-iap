@@ -90,23 +90,51 @@
   background-size: 50% auto;
   background-repeat: no-repeat;
   &.milestone-hoop-1 {
-    background-color: var(--color-green-30);
+    background-color: var(--color-green-light);
     background-image: url('/images/hoop-deco-1.svg');
+    h1.headline {
+      color: var(--color-green);
+    }
   }
   &.milestone-hoop-2 {
-    background-color: var(--color-orange-30);
+    background-color: var(--color-orange-light);
     background-image: url('/images/hoop-deco-2.svg');
+    h1.headline {
+      color: var(--color-orange);
+    }
   }
   &.milestone-hoop-3 {
-    background-color: var(--color-brown-30);
+    background-color: var(--color-brown-light);
     background-image: url('/images/hoop-deco-3.svg');
+    h1.headline {
+      color: var(--color-brown);
+    }
   }
   &.milestone-hoop-4 {
-    background-color: var(--color-red-30);
+    background-color: var(--color-red-light);
     background-image: url('/images/hoop-deco-4.svg');
+    h1.headline {
+      color: var(--color-red);
+    }
   }
   .headline {
     max-width: 40rem;
+  }
+
+  @media only screen and (min-width: 500px) {
+
+    h1.headline {
+      width: 75%;
+    }
+
+  }
+
+  @media only screen and (min-width: 44em) {
+
+    h1.headline {
+      width: 50%
+    }
+
   }
 }
 
