@@ -23,5 +23,5 @@ collections:
     output: false
     permalink: /:collection/:path/
 
-# gems:
-#   - octopress-minify-html
+gems:
+  - octopress-minify-html
