@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Updates
+transPage: /fr/mise-a-jour
 ---
 {%- capture msCheck -%}{% for milestone in site.milestones limit:4 %}{%- if milestone.title -%}1{% break %}{%- endif -%}{% endfor%}{%- endcapture -%}
 {%- capture reportCheck -%}{% for report in site.reports limit:4 %}{%- if report.title -%}1{% break %}{%- endif -%}{% endfor%}{%- endcapture -%}
@@ -30,7 +31,7 @@ title: Updates
       {%- endif -%}
     </div>
     <div class="col-r-2-3 pad-t-2">
-      <a class="text-1-3-4 bold" href="/milestones">More updates.</a>
+      <a class="text-1-3-4 bold" href="/milestones">More milestones.</a>
     </div>
   </div>
 </section>

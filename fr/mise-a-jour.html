@@ -1,0 +1,68 @@
+---
+layout: default
+title: Mise à jour
+lang: fr
+transPage: /updates
+---
+{%- capture msCheck -%}{% for etape-importante in site.etape-importante limit:4 %}{%- if etape-importante.title -%}1{% break %}{%- endif -%}{% endfor%}{%- endcapture -%}
+{%- capture reportCheck -%}{% for rapport in site.rapports limit:4 %}{%- if rapport.title -%}1{% break %}{%- endif -%}{% endfor%}{%- endcapture -%}
+
+{% include patterns/hero-basic.liquid headline=page.title %}
+
+{% assign etape-importante_in_order = site.etape-importante | sort: "order" %}
+<section id="milestones" {% if msCheck != '' %}class="section-deco" {% endif %}tabindex="0">
+  <div class="wrapper gutter pad-t-b-6 grid-m-3">
+    <div class="col">
+      <h2 class="heading-deco">Étapes Importante</h2>
+    </div>
+    <div class="col-r-2-3 grid-updates">
+      {%- if msCheck != '' -%}
+      {% for milestone in etape-importante_in_order reversed limit:4 %}
+      <div class="col-update push-2">
+        <div class="milestone-header-{{ milestone.hoopRef }} gutter-1-2 pad-t-3 push">
+          <p class="push-1-2">{{ milestone.pubDate }}</p>
+        </div>
+        <h3 class="push-1-2">{{ milestone.title }}</h3>
+        {{ milestone.content | truncate: 200 | markdownify }}
+        <a class="bold block text-1-1-4" href="{{ milestone.url }}">Read More</a>
+      </div>
+      {% endfor %}
+      {%- else -%}
+      <p>Aucune mise à jour n'a été publiée.</p>
+      {%- endif -%}
+    </div>
+    <div class="col-r-2-3 pad-t-2">
+      <a class="text-1-3-4 bold" href="/fr/etape-importante">Plus d'étapes.</a>
+    </div>
+  </div>
+</section>
+
+{% assign rapports_in_order = site.rapports | sort: "order" %}
+<section id="reports" tabindex="0">
+  <div class="wrapper gutter pad-t-b-6 grid-m-3">
+    <div class="col">
+      <h2 class="heading-deco">Rapports</h2>
+    </div>
+    <div class="col-r-2-3 grid-updates">
+      {%- if reportCheck != '' -%}
+      {% for report in rapports_in_order reversed limit:2 %}
+      <a class="col-update push-2" href="/images/{{ report.pdfLink }}">
+        <div class="report-img push">
+          <img src="{{ report.coverImg }}" alt="{{ report.title }}">
+        </div>
+        <h3 class="push-1-2">{{ report.title }}</h3>
+        <p>{{ report.pubDate }}</p>
+      </a>
+      {% endfor %}
+      {%- else -%}
+      <p>Aucune rapports n'a été publiée.</p>
+      {%- endif -%}
+    </div>
+    <div class="col-r-2-3 pad-t-2">
+      <a class="text-1-3-4 bold" href="/fr/rapports">Plus de rapports.</a>
+    </div>
+  </div>
+</section>
+
+{% include patterns/hoop-graphic-deco.liquid hoopNum="5" %}
+

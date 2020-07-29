@@ -63,7 +63,7 @@
   <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" />
 </head>
 
-<body id="top" class="{% if page.title %}{{ page.title | downcase | replace: ' ', '-' }}{% elsif page.url == '/' or page.url == '/fr' %}home{% endif %} no-js">
+<body id="top" class="{% if page.title %}{{ page.title | downcase | replace: ' ', '-' | replace: 'à','a' | replace: 'é','e' }}{% elsif page.url == '/' or page.url == '/fr' %}home{% endif %} no-js">
   
   {% include patterns/skip-links.liquid %}
   

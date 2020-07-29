@@ -16,12 +16,30 @@ collections:
   hoop-4:
     output: false
     permalink: /:collection/:path/
+  cerceau-1:
+    output: false
+    permalink: /:collection/:path/
+  cerceau-2:
+    output: false
+    permalink: /:collection/:path/
+  cerceau-3:
+    output: false
+    permalink: /:collection/:path/
+  cerceau-4:
+    output: false
+    permalink: /:collection/:path/
   milestones:
     output: true
     permalink: /:collection/:path/
   reports:
     output: false
     permalink: /:collection/:path/
+  etape-importante:
+    output: true
+    permalink: /fr/:collection/:path/
+  rapports:
+    output: false
+    permalink: /:collection/:path/
 
-gems:
-  - octopress-minify-html
+# gems:
+#   - octopress-minify-html

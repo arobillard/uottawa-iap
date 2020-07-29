@@ -54,7 +54,6 @@ if (accBtn.length > 0) {
 
   if (id) {
     const visitedEl = document.querySelector(id);
-    console.log(visitedEl.firstElementChild)
     openAccordion(visitedEl.firstElementChild);
   }
 
@@ -82,7 +81,6 @@ async function smoothScroll(e) {
 }
 
 links && links.forEach(link => {
-  console.log(link)
   link.addEventListener('click', smoothScroll);
   // if (link.classList.contains('hoop-accordion-button')) {
   //   link.addEventListener('focus', smoothScroll);
@@ -184,8 +182,14 @@ function unhighlightHoopLink(e) {
 }
 
 function navigateHoop(e) {
-  const ref = e.currentTarget.classList[0];
-  window.location.href = `/${ref}`;
+  const lang = document.querySelector('html').getAttribute('lang');
+  if (lang === "fr") {
+    const ref = e.currentTarget.classList[1];
+    window.location.href = `/fr/${ref}`;
+  } else {
+    const ref = e.currentTarget.classList[0];
+    window.location.href = `/${ref}`;
+  }
 }
 
 fwLinks.forEach(link => {

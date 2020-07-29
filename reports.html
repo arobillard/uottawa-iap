@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Reports
+transPage: /fr/rapports
 ---
 {%- capture reportCheck -%}{% for report in site.reports limit:4 %}{%- if report.title -%}1{% break %}{%- endif -%}{% endfor%}{%- endcapture -%}
 
-{% include patterns/hero-basic.liquid headline='Reports' %}
+{% include patterns/hero-basic.liquid headline=page.title %}
 
 {% assign reports_in_order = site.reports | sort: "order" %}
 <section id="reports" tabindex="0">

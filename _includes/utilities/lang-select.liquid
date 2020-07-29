@@ -1,8 +1,10 @@
 {%- capture link -%}
-  {%- if page.lang != 'fr' -%}
+  {%- if page.transPage -%}
+    {{ page.transPage }}
+  {%- elsif page.lang != 'fr' -%}
     /fr{{ page.url | replace:"hoop","cerceau" }}
   {%- else -%}
-    {{ page.url | replace:"cerceau","hoop" }}
+    {{ page.url | replace:"cerceau","hoop" | remove: "/fr" }}
   {%- endif -%}
 {%- endcapture -%}
 

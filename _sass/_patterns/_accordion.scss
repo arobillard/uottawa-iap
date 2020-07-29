@@ -105,6 +105,13 @@
 //   color: var(--color-brown-30)!important;
 // }
 
+.hoop-2,
+.cerceau-2 {
+  .accordion-content .accordion-content-grid h3 {
+    color: var(--color-orange-dark)
+  }
+}
+
 .no-js {
   .hoop-accordion .accordion-content {
     max-height: none;

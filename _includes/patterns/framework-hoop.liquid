@@ -1,9 +1,13 @@
-<div class="hoop-prev hoop-{{ include.hoopNum }}">
+<div class="hoop-prev hoop-{{ include.hoopNum }} {% if page.lang == 'fr' %}hoop-prev-fr{% endif %}">
   <div class="hoop-prev-header push">
-    <h3>Hoop {{ include.hoopNum }}</h3>
+    <h3>{%if page.lang == 'fr' %}Cerceau{% else %}Hoop{% endif %} {{ include.hoopNum }}</h3>
     <h4>{{ include.title }}</h4>
     <p>{{ include.byline }}</p>
   </div>
   <p>{{ include.content }}</p>
-  <a href="/hoop-{{ include.hoopNum }}" aria-label="Read more about Hoop {{ include.hoopNum }}">Read More.</a>
+  {% if page.lang == 'fr' %}
+    <a href="/fr/cerceau-{{ include.hoopNum }}" aria-label="En savoir plus sur cerceau {{ include.hoopNum }}">En savoir plus.</a>
+  {% else %}
+    <a href="/hoop-{{ include.hoopNum }}" aria-label="Read more about Hoop {{ include.hoopNum }}">Read More.</a>
+  {% endif %}
 </div>
