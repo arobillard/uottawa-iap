@@ -1,0 +1,26 @@
+button:hover {
+  cursor: pointer;
+}
+
+a:focus,
+[tabindex="0"]:focus,
+details:focus,
+summary:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: 1px solid var(--color-grey);
+  outline-offset: 3px;
+}
+
+.footer a:focus,
+.footer [tabindex="0"]:focus,
+.footer details:focus,
+.footer summary:focus,
+.footer input:focus,
+.footer textarea:focus,
+.footer button:focus,
+.footer select:focus {
+  outline: 1px solid #fff;
+}

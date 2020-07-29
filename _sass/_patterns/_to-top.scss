@@ -1,0 +1,77 @@
+.to-top {
+  position: fixed;
+  bottom: 0;
+  right: 1.3rem;
+  text-decoration: none;
+  display: inline-block;
+  width: 7rem;
+  height: 3.5rem;
+  transform: translateY(110%);
+  transition: transform .2s;
+  &.sticky {
+    transform: translateY(0);
+  }
+  &-icon,
+  &-text {
+    position: absolute;
+    top: 65%;
+    left: 52.5%;
+    transform: translate(-50%, -50%);
+    transition: top .2s;
+  }
+  &-icon {
+    width: 2.5rem;
+  }
+  &-text {
+    width: auto;
+    text-align: center;
+    top: 150%;
+    background-color: var(--color-hoop);
+    color: #fff;
+  }
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    .bg {
+      color: var(--color-hoop);
+    }
+  }
+  &:hover,
+  &:focus {
+    .to-top-icon {
+      top: 150%;
+    }
+    .to-top-text {
+      top: 65%;
+    }
+  }
+}
+
+.hoop-2,
+.cerceau-2 {
+  .to-top-text {
+    background-color: var(--color-orange-dark);
+  }
+  .to-top-bg .bg {
+    color: var(--color-orange-dark);
+  }
+}
+
+.updates,
+.mise-a-jour {
+  .to-top-text {
+    background-color: var(--color-tan-dark);
+  }
+  .to-top-bg .bg {
+    color: var(--color-tan-dark);
+  }
+}
+
+.no-js {
+  .to-top:focus {
+    transform: translateY(0);
+  }
+}

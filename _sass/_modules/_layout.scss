@@ -1,0 +1,153 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-family: var(--font-primary);
+  color: var(--color-grey);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.break {
+  
+  &-xs::after {
+    content: ' ';
+    display: block;
+  }
+  
+  @media only screen and (min-width: 25em) {
+  
+    &-s::after {
+      content: ' ';
+      display: block;
+    } 
+  
+  }
+
+  @media only screen and (min-width: 38em) {
+  
+    &-m::after {
+      content: ' ';
+      display: block;
+    } 
+  
+  }
+
+  @media only screen and (min-width: 60em) {
+  
+    &-l::after {
+      content: ' ';
+      display: block;
+    } 
+  
+  }
+
+}
+
+/* - - - - - Grids - - - - - */
+
+[class*="grid-s"] {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+[class*="grid-flex"] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-flex-split {
+  justify-content: space-between;
+}
+
+.grid-flex-v-top {
+  align-items: flex-start;
+}
+
+.col-r-2-3 {
+  grid-column: 2 / 4;
+}
+
+@media only screen and (min-width: 25em) {
+
+  .grid-s-2 {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.3rem;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  [class*="grid-m"] {
+    display: grid;
+    column-gap: 1.3rem;
+  }
+
+  .grid-m-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-m-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .grid-l-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-l-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+/* - - - - - Layouts - - - - - */
+
+.wrapper {
+  max-width: 72em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper-narrow-no-center {
+  max-width: 45em;
+  width: 100%;
+}
+
+/* - - - - - Displays - - - - - */
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+

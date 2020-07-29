@@ -1,0 +1,23 @@
+{%- capture link -%}
+  {%- if page.transPage -%}
+    {{ page.transPage }}
+  {%- elsif page.lang != 'fr' -%}
+    /fr{{ page.url | replace:"hoop","cerceau" }}
+  {%- else -%}
+    {{ page.url | replace:"cerceau","hoop" | remove: "/fr" }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture text -%}
+  {%- if page.lang == 'fr' -%}EN{%- else -%}FR{%- endif -%}
+{%- endcapture -%}
+
+{%- capture aria -%}
+  {%- if page.lang == 'fr' -%}
+    English (switch to English version of this page)
+  {%- else -%}
+    Français (passer à la version française de cette page)
+  {%- endif -%}
+{%- endcapture -%}
+
+<a href="{{- link -}}" class="language-select push-l" aria-label="{{- aria -}}">{{- text -}}</a>

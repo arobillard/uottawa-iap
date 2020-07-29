@@ -1,0 +1,75 @@
+<nav id="{{ include.id | default: 'nav' }}" class="{{ include.class | default: 'nav' }}">
+  <ul>
+    {% if page.lang == 'fr' %}
+      <li>
+        <a class="hoop-1" {% if page.url contains 'cerceau-1' %}aria-current="page" {% endif %} href="/fr/cerceau-1">
+          Cerceau 1
+          <strong class="block">Établissement</strong>
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="hoop-2" {% if page.url contains 'cerceau-2' %}aria-current="page" {% endif %} href="/fr/cerceau-2">
+          Cerceau 2
+          <strong class="block">Facultés, <span class="break-m">départements</span> et programmes</strong>
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="hoop-3" {% if page.url contains 'cerceau-3' %}aria-current="page" {% endif %} href="/fr/cerceau-3">
+          Cerceau 3
+          <strong class="block">Espace physique</strong>
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="hoop-4" {% if page.url contains 'cerceau-4' %}aria-current="page" {% endif %} href="/fr/cerceau-4">
+          Cerceau 4
+          <strong class="block">Communauté autochtone</strong>
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="updates" {% if page.url contains 'updates' %}aria-current="page" {% endif %} href="/fr/mise-a-jour">
+          Mises à jour
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+    {% else %}
+      <li>
+        <a class="hoop-1" {% if page.url contains 'hoop-1' %}aria-current="page"{% endif %} href="/hoop-1">
+          Hoop 1
+          <strong class="block">The Institution</strong>
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="hoop-2" {% if page.url contains 'hoop-2' %}aria-current="page"{% endif %} href="/hoop-2">
+          Hoop 2
+          <strong class="block">Faculties, <span class="break-m">Departments,</span> and Programs</strong>
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="hoop-3" {% if page.url contains 'hoop-3' %}aria-current="page"{% endif %} href="/hoop-3">
+          Hoop 3
+          <strong class="block">The Physical Space</strong>
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="hoop-4" {% if page.url contains 'hoop-4' %}aria-current="page"{% endif %} href="/hoop-4">
+          Hoop 4
+          <strong class="block">Indigenous Community</strong>
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+      <li>
+        <a class="updates" {% if page.url contains 'updates' %}aria-current="page"{% endif %} href="/updates">
+          Updates
+          {% include graphics/nav-highlight.liquid %}
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>

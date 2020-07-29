@@ -1,0 +1,119 @@
+.hoop-accordion {
+  .hoop-accordion-button {
+    background-color: var(--color-grey);
+    display: block;
+    color: #fff;
+    width: calc(100% + 1.3rem);
+    text-align: left;
+    border: 0;
+    border-left: 1.3rem solid var(--color-hoop);
+    margin: 0;
+    margin-left: -1.3rem;
+    padding: 1.3rem 1.3rem 1.3rem 0;
+    font-family: var(--font-primary);
+    text-decoration: none;
+
+    .hoop-accordion-title {
+      color: #fff;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 1.3rem;
+      font-size: 1.5rem;
+      margin: 0;
+      .hoop-number {
+        display: block;
+        text-align: right;
+        font-weight: 600;
+      }
+      .hoop-title {
+        grid-column: 2 / span 10;
+        font-weight: 600;
+      }
+      .hoop-plus-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 100%;
+          max-width: 2rem;
+          color: #fff;
+          transition: transform .2s;
+        }
+      }
+    }
+    &.open {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s;
+    .accordion-content-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 1.3rem;
+      align-items: baseline;
+      h3 {
+        font-size: 1.125rem;
+        grid-column: 1 / span 2;
+        text-align: right;
+        color: var(--color-hoop);
+      }
+      .content-block {
+        grid-column: 3 / span 9;
+        padding-bottom: 1.3rem;
+        p + p:last-child {
+          margin-bottom: 1.3rem;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 37.999em) {
+    .hoop-accordion-button {
+      padding-right: 2.6rem;
+      margin-right: -1.3rem;
+      width: calc(100% + 2.6rem);
+      .hoop-accordion-title {
+        display: block;
+        padding-left: 1.3rem;
+        span.hoop-number {
+          text-align: left;
+          display: block;
+          margin-bottom: .65rem;
+        }
+        .hoop-plus-icon {
+          display: none;
+        }
+      }
+    }
+    .accordion-content .accordion-content-grid {
+      display: block;
+      padding-left: 1.3rem;
+      padding-right: 1.3rem;
+      h3 {
+        text-align: left;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// .hoop-3 .hoop-accordion-title svg {
+//   color: var(--color-brown-30)!important;
+// }
+
+.hoop-2,
+.cerceau-2 {
+  .accordion-content .accordion-content-grid h3 {
+    color: var(--color-orange-dark)
+  }
+}
+
+.no-js {
+  .hoop-accordion .accordion-content {
+    max-height: none;
+  } 
+}

@@ -1,0 +1,333 @@
+/* - - - - - Hero - - - - - */
+
+.hero {
+  height: 100vh;
+  max-height: 900px;
+  display: flex;
+  align-items: center;
+  background-image: url('/images/banner-birch-35.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  [class*="bil-"] {
+    margin-bottom: .5rem;
+  }
+}
+
+.hero::after,
+.hero::before {
+  content: ' ';
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hero::after {
+  background-image: url('/images/graphic-wigwam-1.svg');
+  background-size: 100% auto;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  right: 0;
+  z-index: 0;
+}
+
+.cerceau-1 .hero::after,
+.hoop-1 .hero::after {
+  background-image: url('/images/hoop-1-graphic.png');
+  width: 80%;
+}
+
+.cerceau-2 .hero::after,
+.hoop-2 .hero::after {
+  background-image: url('/images/hoop-2-graphic.png');
+  width: 80%;
+}
+
+.cerceau-3 .hero::after,
+.hoop-3 .hero::after {
+  background-image: url('/images/hoop-3-graphic.png');
+  width: 80%;
+}
+
+.cerceau-4 .hero::after,
+.hoop-4 .hero::after {
+  background-image: url('/images/hoop-4-graphic.png');
+  width: 80%;
+}
+
+.mise-a-jour,
+.updates,
+.etape-importante,
+.milestones,
+.rapports,
+.reports {
+  .hero::after {
+    background-image: url('/images/graphic-update.svg');
+  }
+}
+
+@media only screen and (min-width: 25em) {
+ 
+  .cerceau-1 .hero::after,
+  .hoop-1 .hero::after,
+  .cerceau-2 .hero::after,
+  .hoop-2 .hero::after,
+  .cerceau-3 .hero::after,
+  .hoop-3 .hero::after,
+  .cerceau-4 .hero::after,
+  .hoop-4 .hero::after {
+    width: 60%;
+  }
+
+}
+
+.hero::before {
+  background-image: url('/images/graphic-bark.svg');
+  background-size: 100% auto;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  width: 20%;
+  left: 1.3rem;
+  bottom: 2.6rem;
+  display: none;
+}
+
+.cerceau-1 .hero::before,
+.hoop-1 .hero::before {
+  background-image: url('/images/hoop-1-birch.svg');
+}
+
+.cerceau-2 .hero::before,
+.hoop-2 .hero::before {
+  background-image: url('/images/hoop-2-birch.svg');
+}
+
+.cerceau-3 .hero::before,
+.hoop-3 .hero::before {
+  background-image: url('/images/hoop-3-birch.svg');
+}
+
+.cerceau-4 .hero::before,
+.hoop-4 .hero::before {
+  background-image: url('/images/hoop-4-birch.svg');
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content .headline {
+  font-size: 2rem;
+  font-weight: 900;
+  .bil-en {
+    color: var(--color-brown);
+  }
+  .headline-byline {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-grey);
+  }
+}
+
+.hero-content .byline {
+  font-size: 1.75rem;
+  color: var(--color-red);
+  .bil-en {
+    color: var(--color-orange);
+  }
+}
+
+[class*="hoop-"],
+[class*="cerceau-"] {
+  .hero .hero-content .headline,
+  .hero .hero-content .hoop-number {
+    color: var(--color-hoop);
+  }
+}
+
+.hero-content .hoop-number {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.hero-milestone {
+  height: 50vh;
+  max-height: 400px;
+  display: flex;
+  align-items: flex-end;
+  background-position: right bottom;
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  &.milestone-hoop-1 {
+    background-color: var(--color-green-light);
+    background-image: url('/images/hoop-deco-1.svg');
+    h1.headline {
+      color: var(--color-green);
+    }
+  }
+  &.milestone-hoop-2 {
+    background-color: var(--color-orange-light);
+    background-image: url('/images/hoop-deco-2.svg');
+    h1.headline {
+      color: var(--color-orange);
+    }
+  }
+  &.milestone-hoop-3 {
+    background-color: var(--color-brown-light);
+    background-image: url('/images/hoop-deco-3.svg');
+    h1.headline {
+      color: var(--color-brown);
+    }
+  }
+  &.milestone-hoop-4 {
+    background-color: var(--color-red-light);
+    background-image: url('/images/hoop-deco-4.svg');
+    h1.headline {
+      color: var(--color-red);
+    }
+  }
+  .headline {
+    max-width: 40rem;
+  }
+
+  @media only screen and (min-width: 500px) {
+
+    h1.headline {
+      width: 75%;
+    }
+
+  }
+
+  @media only screen and (min-width: 44em) {
+
+    h1.headline {
+      width: 50%
+    }
+
+  }
+}
+
+@media only screen and (max-height: 44em) {
+
+  // .hero-content {
+  //   display: grid;
+  //   grid-template-columns: repeat(12, 1fr);
+  // }
+
+  // .hero-content .headline,
+  // .hero-content .byline {
+  //   grid-column: 1 / span 10;
+  // }
+
+  .hero::after {
+    width: 75%;
+  }
+
+  .hero-content .headline {
+    font-size: 2rem;
+    .headline-byline {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media only screen and (max-height: 30em) {
+
+    .hero::after {
+      width: 55%;
+    }
+   
+    .hero::before {
+      display: block;
+    }
+  
+  }
+
+}
+
+@media only screen and (max-height: 400px) and (max-width: 600px) {
+
+  .hero-content .headline {
+    font-size: 1.5rem;
+    .headline-byline {
+      font-size: 1.125rem;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+  
+  .hero-content .headline {
+    font-size: 3rem;
+    .headline-byline {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media only screen and (max-height: 44em) {
+  
+    .hero::after {
+      width: 55%;
+    }
+
+    .hero::before {
+      display: block;
+    }
+  
+    .hero-content .headline {
+      font-size: 2rem;
+      .headline-byline {
+        font-size: 1.5rem;
+      }
+    }
+  
+  }  
+  
+}
+
+@media only screen and (min-width: 48em) {
+
+  // .hero-content {
+  //   display: grid;
+  //   grid-template-columns: repeat(12, 1fr);
+  // }
+
+  // .hero-content .headline,
+  // .hero-content .byline {
+  //   grid-column: 1 / span 10;
+  // }
+
+  .hero::after {
+    width: 55%;
+  }
+
+  .hero::before {
+    display: block;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .hero-content .headline,
+  .hero-content .byline {
+    grid-column: 1 / span 8;
+  }
+
+}
+
+@media only screen and (min-width: 70em) {
+
+  .hero-content .headline,
+  .hero-content .byline {
+    grid-column: 1 / span 8;
+  }
+
+}

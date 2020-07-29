@@ -1,0 +1,35 @@
+ap-framework-en:
+  - hoopNum: 1
+    title: "The Institution:"
+    byline: "Policy, procedural, service, and institutional betterment"
+    content: 1 includes actions intended to bring about structural changes to the staffing, administrative practice, and governance of the university
+  - hoopNum: 2
+    title: "Faculties, Departments, and&nbsp;Programs:"
+    byline: "Indigenous curriculum and research development"
+    content: "This hoop brings systemic intellectual change to the university landscape, in order to attract and retain Indigenous scholars and students while promoting campus-wide Indigenization via research and teaching excellence in multiple fields"
+  - hoopNum: 3
+    title: "The Physical Space:"
+    byline: "Aesthetic Infusion, Inclusion, Improvement"
+    content: "Hoop 3 binds together a group of actions intended to bring aesthetic and symbolic changes to the space we inhabit together on our campus"
+  - hoopNum: 4
+    title: "Indigenous Community:"
+    byline: "Internal and external engagement"
+    content: "Our final hoop promotes and facilitates the inclusion of Indigenous knowledge keepers and elders, communities, and organizations in the day-to-day experiences of students, faculty, and staff"
+ap-framework-fr:
+  - hoopNum: 1
+    title: "Établissement :"
+    byline: "amélioration des politiques, des procédures, des services et de l’établissement"
+    content: "Le premier cerceau comprend des mesures visant à apporter des changements structurels à la dotation en personnel, aux pratiques administratives et à la gouvernance de l’Université."
+  - hoopNum: 2
+    title: "Facultés, départements et programmes :"
+    byline: "élaboration d’un programme d’études autochtones et développement de la recherche autochtone"
+    content: "Ce cerceau apporte un changement intellectuel systémique au milieu universitaire, afin d’attirer et de retenir les chercheurs et les étudiants autochtones tout en favorisant l’autochtonisation à l’échelle du campus par l’excellence en recherche et en enseignement dans de nombreux domaines."
+  - hoopNum: 3
+    title: "Espace physique :"
+    byline: "apport esthétique, inclusion, amélioration"
+    content: "Le troisième cerceau regroupe un ensemble de mesures destinées à apporter des changements esthétiques et symboliques à l’espace que nous occupons ensemble sur notre campus."
+  - hoopNum: 4
+    title: "Communauté autochtone :"
+    byline: "participation interne et externe"
+    content: "Notre dernier cerceau favorise et facilite l’inclusion des gardiens du savoir autochtone et des aînés, des communautés et des organisations dans les expériences vécues au quotidien par les étudiants, les professeurs et le personnel."
+
