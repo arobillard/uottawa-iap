@@ -32,7 +32,7 @@ transPage: /updates
       {%- endif -%}
     </div>
     <div class="col-r-2-3 pad-t-2">
-      <a class="text-1-3-4 bold" href="/fr/etape-importante">Plus d'étapes.</a>
+      <a class="text-1-3-4 bold" href="{{site.baseurl}}/fr/etape-importante">Plus d'étapes.</a>
     </div>
   </div>
 </section>
@@ -46,7 +46,7 @@ transPage: /updates
     <div class="col-r-2-3 grid-updates">
       {%- if reportCheck != '' -%}
       {% for report in rapports_in_order reversed limit:2 %}
-      <a class="col-update push-2" href="/images/{{ report.pdfLink }}">
+      <a class="col-update push-2" href="{{site.baseurl}}/images/{{ report.pdfLink }}">
         <div class="report-img push">
           <img src="{{ report.coverImg }}" alt="{{ report.title }}">
         </div>
@@ -59,7 +59,7 @@ transPage: /updates
       {%- endif -%}
     </div>
     <div class="col-r-2-3 pad-t-2">
-      <a class="text-1-3-4 bold" href="/fr/rapports">Plus de rapports.</a>
+      <a class="text-1-3-4 bold" href="{{site.baseurl}}/fr/rapports">Plus de rapports.</a>
     </div>
   </div>
 </section>

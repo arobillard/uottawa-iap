@@ -6,8 +6,8 @@
   </div>
   <p>{{ include.content }}</p>
   {% if page.lang == 'fr' %}
-    <a href="/fr/cerceau-{{ include.hoopNum }}" aria-label="En savoir plus sur cerceau {{ include.hoopNum }}">En savoir plus.</a>
+    <a href="{{site.baseurl}}/fr/cerceau-{{ include.hoopNum }}" aria-label="En savoir plus sur cerceau {{ include.hoopNum }}">En savoir plus.</a>
   {% else %}
-    <a href="/hoop-{{ include.hoopNum }}" aria-label="Read more about Hoop {{ include.hoopNum }}">Read More.</a>
+    <a href="{{site.baseurl}}/hoop-{{ include.hoopNum }}" aria-label="Read more about Hoop {{ include.hoopNum }}">Read More.</a>
   {% endif %}
 </div>

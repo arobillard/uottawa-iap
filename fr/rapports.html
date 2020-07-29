@@ -12,7 +12,7 @@ transPage: /reports
   <div class="wrapper gutter pad-t-b-6 grid-s-2 grid-m-3">
     {%- if reportCheck != '' -%}
     {% for report in reports_in_order reversed limit:2 %}
-    <a class="col-update push-2" href="/images/{{ report.pdfLink }}">
+    <a class="col-update push-2" href="{{site.baseurl}}/images/{{ report.pdfLink }}">
       <div class="report-img push">
         <img src="{{ report.coverImg }}" alt="{{ report.title }}">
       </div>

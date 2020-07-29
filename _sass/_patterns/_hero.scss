@@ -5,7 +5,7 @@
   max-height: 900px;
   display: flex;
   align-items: center;
-  background-image: url('/images/banner-birch-35.jpg');
+  background-image: url('#{$baseurl}/images/banner-birch-35.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 }
 
 .hero::after {
-  background-image: url('/images/graphic-wigwam-1.svg');
+  background-image: url('#{$baseurl}/images/graphic-wigwam-1.svg');
   background-size: 100% auto;
   background-position: right bottom;
   background-repeat: no-repeat;
@@ -35,27 +35,28 @@
   z-index: 0;
 }
 
+
 .cerceau-1 .hero::after,
 .hoop-1 .hero::after {
-  background-image: url('/images/hoop-1-graphic.png');
+  background-image: url('#{$baseurl}/images/hoop-1-graphic.png');
   width: 80%;
 }
 
 .cerceau-2 .hero::after,
 .hoop-2 .hero::after {
-  background-image: url('/images/hoop-2-graphic.png');
+  background-image: url('#{$baseurl}/images/hoop-2-graphic.png');
   width: 80%;
 }
 
 .cerceau-3 .hero::after,
 .hoop-3 .hero::after {
-  background-image: url('/images/hoop-3-graphic.png');
+  background-image: url('#{$baseurl}/images/hoop-3-graphic.png');
   width: 80%;
 }
 
 .cerceau-4 .hero::after,
 .hoop-4 .hero::after {
-  background-image: url('/images/hoop-4-graphic.png');
+  background-image: url('#{$baseurl}/images/hoop-4-graphic.png');
   width: 80%;
 }
 
@@ -66,7 +67,7 @@
 .rapports,
 .reports {
   .hero::after {
-    background-image: url('/images/graphic-update.svg');
+    background-image: url('#{$baseurl}/images/graphic-update.svg');
   }
 }
 
@@ -86,7 +87,7 @@
 }
 
 .hero::before {
-  background-image: url('/images/graphic-bark.svg');
+  background-image: url('#{$baseurl}/images/graphic-bark.svg');
   background-size: 100% auto;
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -98,22 +99,22 @@
 
 .cerceau-1 .hero::before,
 .hoop-1 .hero::before {
-  background-image: url('/images/hoop-1-birch.svg');
+  background-image: url('#{$baseurl}/images/hoop-1-birch.svg');
 }
 
 .cerceau-2 .hero::before,
 .hoop-2 .hero::before {
-  background-image: url('/images/hoop-2-birch.svg');
+  background-image: url('#{$baseurl}/images/hoop-2-birch.svg');
 }
 
 .cerceau-3 .hero::before,
 .hoop-3 .hero::before {
-  background-image: url('/images/hoop-3-birch.svg');
+  background-image: url('#{$baseurl}/images/hoop-3-birch.svg');
 }
 
 .cerceau-4 .hero::before,
 .hoop-4 .hero::before {
-  background-image: url('/images/hoop-4-birch.svg');
+  background-image: url('#{$baseurl}/images/hoop-4-birch.svg');
 }
 
 .hero-content {
@@ -167,28 +168,28 @@
   background-repeat: no-repeat;
   &.milestone-hoop-1 {
     background-color: var(--color-green-light);
-    background-image: url('/images/hoop-deco-1.svg');
+    background-image: url('#{$baseurl}/images/hoop-deco-1.svg');
     h1.headline {
       color: var(--color-green);
     }
   }
   &.milestone-hoop-2 {
     background-color: var(--color-orange-light);
-    background-image: url('/images/hoop-deco-2.svg');
+    background-image: url('#{$baseurl}/images/hoop-deco-2.svg');
     h1.headline {
       color: var(--color-orange);
     }
   }
   &.milestone-hoop-3 {
     background-color: var(--color-brown-light);
-    background-image: url('/images/hoop-deco-3.svg');
+    background-image: url('#{$baseurl}/images/hoop-deco-3.svg');
     h1.headline {
       color: var(--color-brown);
     }
   }
   &.milestone-hoop-4 {
     background-color: var(--color-red-light);
-    background-image: url('/images/hoop-deco-4.svg');
+    background-image: url('#{$baseurl}/images/hoop-deco-4.svg');
     h1.headline {
       color: var(--color-red);
     }

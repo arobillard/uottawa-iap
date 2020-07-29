@@ -70,7 +70,7 @@
 }
 
 .site-background {
-  background-image: url('/images/bg-background.jpg');
+  background-image: url('#{$baseurl}/images/bg-background.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -165,7 +165,7 @@ h2.heading-deco {
   position: relative;
   &::after {
     content: ' ';
-    background-image: url('/images/g-dots-swoosh.svg');
+    background-image: url('#{$baseurl}/images/g-dots-swoosh.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -191,7 +191,7 @@ h2.heading-deco {
 @media only screen and (min-width: 38em) {
 
   .site-introduction {
-    background-image: url('/images/g-home-intro.svg');
+    background-image: url('#{$baseurl}/images/g-home-intro.svg');
     background-position: left bottom;
     background-size: 33.333%;
     background-repeat: no-repeat;
@@ -199,9 +199,9 @@ h2.heading-deco {
 
   .site-background {
     background-image:
-      url('/images/g-birch-2-groups.svg'),
-      url('/images/g-dots-swoosh.svg'),
-      url('/images/bg-background.jpg');
+      url('#{$baseurl}/images/g-birch-2-groups.svg'),
+      url('#{$baseurl}/images/g-dots-swoosh.svg'),
+      url('#{$baseurl}/images/bg-background.jpg');
     background-position:
       2.6rem 80%,
       -1.3rem 7.8rem,
@@ -230,7 +230,7 @@ h2.heading-deco {
   }
 
   .updates .section-deco {
-    background-image: url('/images/g-birch-1-group.svg');
+    background-image: url('#{$baseurl}/images/g-birch-1-group.svg');
     background-position: left 80%;
     background-size: 25%;
     background-repeat: no-repeat;

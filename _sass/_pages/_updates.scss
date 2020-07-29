@@ -30,19 +30,19 @@ a.col-update {
 
 .milestone-header-1 {
   background-color: var(--color-green-light);
-  background-image: url('/images/hoop-deco-1.svg');
+  background-image: url('#{$baseurl}/images/hoop-deco-1.svg');
 }
 .milestone-header-2 {
   background-color: var(--color-orange-light);
-  background-image: url('/images/hoop-deco-2.svg');
+  background-image: url('#{$baseurl}/images/hoop-deco-2.svg');
 }
 .milestone-header-3 {
   background-color: var(--color-brown-light);
-  background-image: url('/images/hoop-deco-3.svg');
+  background-image: url('#{$baseurl}/images/hoop-deco-3.svg');
 }
 .milestone-header-4 {
   background-color: var(--color-red-light);
-  background-image: url('/images/hoop-deco-4.svg');
+  background-image: url('#{$baseurl}/images/hoop-deco-4.svg');
 }
 
 @media only screen and (min-width: 30em) {
