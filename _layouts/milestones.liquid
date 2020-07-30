@@ -5,5 +5,9 @@ layout: default
 <section class="article-content wrapper gutter pad-t-b-4" tabindex="0">
   <div class="wrapper-narrow-no-center">
     {{ content }}
+    <hr>
+    <p><strong>{{ page.author }}</strong>, <em>{{ page.authorTitle }}, {{ page.department }}</em></p>
   </div>
 </section>
+
+{% include patterns/hoop-graphic-deco.liquid hoopNum=page.hoopRef %}

@@ -1,0 +1,8 @@
+<div class="col-update push-2">
+  <div class="milestone-header-{{ include.hoopRef }} gutter-1-2 pad-t-3 push">
+    <p class="push-1-2">{{ include.pubDate }}</p>
+  </div>
+  <h3 class="push-1-2">{{ include.title }}</h3>
+  {{ include.content | truncate: 200 | markdownify }}
+  <a class="bold block text-1-1-4" href="{{site.baseurl}}{{ include.url }}">Read More</a>
+</div>

@@ -258,35 +258,35 @@ a:focus, [tabindex="0"]:focus, details:focus, summary:focus, input:focus, textar
 @media only screen and (min-width: 48em) { .footer .wrapper:not(.nav-footer-wrap) { grid-template-columns: repeat(3, 1fr); align-items: flex-end; justify-items: flex-start; text-align: left; } .nav-footer { text-align: left; } .nav-footer ul { display: flex; } .nav-footer ul li:not(:last-child) { margin-bottom: 0; margin-right: 1.3rem; } }
 
 /* - - - - - Hero - - - - - */
-.hero { height: 100vh; max-height: 900px; display: flex; align-items: center; background-image: url("/uottawa-iap/images/banner-birch-35.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
+.hero { height: 100vh; max-height: 900px; display: flex; align-items: center; background-image: url("/images/banner-birch-35.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
 
 .hero [class*="bil-"] { margin-bottom: .5rem; }
 
 .hero::after, .hero::before { content: ' '; height: 100%; position: absolute; bottom: 0; z-index: 0; }
 
-.hero::after { background-image: url("/uottawa-iap/images/graphic-wigwam-1.svg"); background-size: 100% auto; background-position: right bottom; background-repeat: no-repeat; width: 100%; right: 0; z-index: 0; }
+.hero::after { background-image: url("/images/graphic-wigwam-1.svg"); background-size: 100% auto; background-position: right bottom; background-repeat: no-repeat; width: 100%; right: 0; z-index: 0; }
 
-.cerceau-1 .hero::after, .hoop-1 .hero::after { background-image: url("/uottawa-iap/images/hoop-1-graphic.png"); width: 80%; }
+.cerceau-1 .hero::after, .hoop-1 .hero::after { background-image: url("/images/hoop-1-graphic.png"); width: 80%; }
 
-.cerceau-2 .hero::after, .hoop-2 .hero::after { background-image: url("/uottawa-iap/images/hoop-2-graphic.png"); width: 80%; }
+.cerceau-2 .hero::after, .hoop-2 .hero::after { background-image: url("/images/hoop-2-graphic.png"); width: 80%; }
 
-.cerceau-3 .hero::after, .hoop-3 .hero::after { background-image: url("/uottawa-iap/images/hoop-3-graphic.png"); width: 80%; }
+.cerceau-3 .hero::after, .hoop-3 .hero::after { background-image: url("/images/hoop-3-graphic.png"); width: 80%; }
 
-.cerceau-4 .hero::after, .hoop-4 .hero::after { background-image: url("/uottawa-iap/images/hoop-4-graphic.png"); width: 80%; }
+.cerceau-4 .hero::after, .hoop-4 .hero::after { background-image: url("/images/hoop-4-graphic.png"); width: 80%; }
 
-.mise-a-jour .hero::after, .updates .hero::after, .etape-importante .hero::after, .milestones .hero::after, .rapports .hero::after, .reports .hero::after { background-image: url("/uottawa-iap/images/graphic-update.svg"); }
+.mise-a-jour .hero::after, .updates .hero::after, .etape-importante .hero::after, .milestones .hero::after, .rapports .hero::after, .reports .hero::after { background-image: url("/images/graphic-update.svg"); }
 
 @media only screen and (min-width: 25em) { .cerceau-1 .hero::after, .hoop-1 .hero::after, .cerceau-2 .hero::after, .hoop-2 .hero::after, .cerceau-3 .hero::after, .hoop-3 .hero::after, .cerceau-4 .hero::after, .hoop-4 .hero::after { width: 60%; } }
 
-.hero::before { background-image: url("/uottawa-iap/images/graphic-bark.svg"); background-size: 100% auto; background-position: left bottom; background-repeat: no-repeat; width: 20%; left: 1.3rem; bottom: 2.6rem; display: none; }
+.hero::before { background-image: url("/images/graphic-bark.svg"); background-size: 100% auto; background-position: left bottom; background-repeat: no-repeat; width: 20%; left: 1.3rem; bottom: 2.6rem; display: none; }
 
-.cerceau-1 .hero::before, .hoop-1 .hero::before { background-image: url("/uottawa-iap/images/hoop-1-birch.svg"); }
+.cerceau-1 .hero::before, .hoop-1 .hero::before { background-image: url("/images/hoop-1-birch.svg"); }
 
-.cerceau-2 .hero::before, .hoop-2 .hero::before { background-image: url("/uottawa-iap/images/hoop-2-birch.svg"); }
+.cerceau-2 .hero::before, .hoop-2 .hero::before { background-image: url("/images/hoop-2-birch.svg"); }
 
-.cerceau-3 .hero::before, .hoop-3 .hero::before { background-image: url("/uottawa-iap/images/hoop-3-birch.svg"); }
+.cerceau-3 .hero::before, .hoop-3 .hero::before { background-image: url("/images/hoop-3-birch.svg"); }
 
-.cerceau-4 .hero::before, .hoop-4 .hero::before { background-image: url("/uottawa-iap/images/hoop-4-birch.svg"); }
+.cerceau-4 .hero::before, .hoop-4 .hero::before { background-image: url("/images/hoop-4-birch.svg"); }
 
 .hero-content { position: relative; z-index: 1; }
 
@@ -306,19 +306,19 @@ a:focus, [tabindex="0"]:focus, details:focus, summary:focus, input:focus, textar
 
 .hero-milestone { height: 50vh; max-height: 400px; display: flex; align-items: flex-end; background-position: right bottom; background-size: 50% auto; background-repeat: no-repeat; }
 
-.hero-milestone.milestone-hoop-1 { background-color: var(--color-green-light); background-image: url("/uottawa-iap/images/hoop-deco-1.svg"); }
+.hero-milestone.milestone-hoop-1 { background-color: var(--color-green-light); background-image: url("/images/hoop-deco-1.svg"); }
 
 .hero-milestone.milestone-hoop-1 h1.headline { color: var(--color-green); }
 
-.hero-milestone.milestone-hoop-2 { background-color: var(--color-orange-light); background-image: url("/uottawa-iap/images/hoop-deco-2.svg"); }
+.hero-milestone.milestone-hoop-2 { background-color: var(--color-orange-light); background-image: url("/images/hoop-deco-2.svg"); }
 
 .hero-milestone.milestone-hoop-2 h1.headline { color: var(--color-orange); }
 
-.hero-milestone.milestone-hoop-3 { background-color: var(--color-brown-light); background-image: url("/uottawa-iap/images/hoop-deco-3.svg"); }
+.hero-milestone.milestone-hoop-3 { background-color: var(--color-brown-light); background-image: url("/images/hoop-deco-3.svg"); }
 
 .hero-milestone.milestone-hoop-3 h1.headline { color: var(--color-brown); }
 
-.hero-milestone.milestone-hoop-4 { background-color: var(--color-red-light); background-image: url("/uottawa-iap/images/hoop-deco-4.svg"); }
+.hero-milestone.milestone-hoop-4 { background-color: var(--color-red-light); background-image: url("/images/hoop-deco-4.svg"); }
 
 .hero-milestone.milestone-hoop-4 h1.headline { color: var(--color-red); }
 
@@ -458,13 +458,13 @@ a.col-update h3 { color: var(--color-grey); }
 
 .report-img img { position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%; width: 100%; object-fit: cover; }
 
-.milestone-header-1 { background-color: var(--color-green-light); background-image: url("/uottawa-iap/images/hoop-deco-1.svg"); }
+.milestone-header-1 { background-color: var(--color-green-light); background-image: url("/images/hoop-deco-1.svg"); }
 
-.milestone-header-2 { background-color: var(--color-orange-light); background-image: url("/uottawa-iap/images/hoop-deco-2.svg"); }
+.milestone-header-2 { background-color: var(--color-orange-light); background-image: url("/images/hoop-deco-2.svg"); }
 
-.milestone-header-3 { background-color: var(--color-brown-light); background-image: url("/uottawa-iap/images/hoop-deco-3.svg"); }
+.milestone-header-3 { background-color: var(--color-brown-light); background-image: url("/images/hoop-deco-3.svg"); }
 
-.milestone-header-4 { background-color: var(--color-red-light); background-image: url("/uottawa-iap/images/hoop-deco-4.svg"); }
+.milestone-header-4 { background-color: var(--color-red-light); background-image: url("/images/hoop-deco-4.svg"); }
 
 @media only screen and (min-width: 30em) { #reports .grid-updates { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 1.3rem; } }
 
@@ -488,7 +488,7 @@ a.col-update h3 { color: var(--color-grey); }
 
 .updates { --color-hoop: var(--color-tan); }
 
-.site-background { background-image: url("/uottawa-iap/images/bg-background.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+.site-background { background-image: url("/images/bg-background.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
 
 .framework-structure-wrap { position: relative; }
 
@@ -518,13 +518,13 @@ a.col-update h3 { color: var(--color-grey); }
 
 h2.heading-deco { position: relative; }
 
-h2.heading-deco::after { content: ' '; background-image: url("/uottawa-iap/images/g-dots-swoosh.svg"); background-size: cover; background-position: center; background-repeat: no-repeat; position: absolute; width: 50vw; height: 16.522160355vw; left: 0; top: -3rem; transform: translateX(-80%); }
+h2.heading-deco::after { content: ' '; background-image: url("/images/g-dots-swoosh.svg"); background-size: cover; background-position: center; background-repeat: no-repeat; position: absolute; width: 50vw; height: 16.522160355vw; left: 0; top: -3rem; transform: translateX(-80%); }
 
 @media only screen and (min-width: 30em) { h2.heading-deco::after { top: -4rem; } }
 
-@media only screen and (min-width: 38em) { .site-introduction { background-image: url("/uottawa-iap/images/g-home-intro.svg"); background-position: left bottom; background-size: 33.333%; background-repeat: no-repeat; } .site-background { background-image: url("/uottawa-iap/images/g-birch-2-groups.svg"), url("/uottawa-iap/images/g-dots-swoosh.svg"), url("/uottawa-iap/images/bg-background.jpg"); background-position: 2.6rem 80%, -1.3rem 7.8rem, center; background-size: 25% auto, 30% auto, cover; background-repeat: no-repeat; } .framework-structure { width: 50%; } .hoop-list { display: flex; } h2.heading-deco::after { top: -6rem; width: 40vw; height: 13.217728284vw; } .updates .section-deco { background-image: url("/uottawa-iap/images/g-birch-1-group.svg"); background-position: left 80%; background-size: 25%; background-repeat: no-repeat; } }
+@media only screen and (min-width: 38em) { .site-introduction { background-image: url("/images/g-home-intro.svg"); background-position: left bottom; background-size: 33.333%; background-repeat: no-repeat; } .site-background { background-image: url("/images/g-birch-2-groups.svg"), url("/images/g-dots-swoosh.svg"), url("/images/bg-background.jpg"); background-position: 2.6rem 80%, -1.3rem 7.8rem, center; background-size: 25% auto, 30% auto, cover; background-repeat: no-repeat; } .framework-structure { width: 50%; } .hoop-list { display: flex; } h2.heading-deco::after { top: -6rem; width: 40vw; height: 13.217728284vw; } .updates .section-deco { background-image: url("/images/g-birch-1-group.svg"); background-position: left 80%; background-size: 25%; background-repeat: no-repeat; } }
 
-@media only screen and (min-width: 60em) { .hoop-list { right: 10%; } h2.heading-deco::after { top: -6rem; width: 30vw; height: 9.913296213vw; } }
+@media only screen and (min-width: 60em) { .hoop-list { right: 10%; } h2.heading-deco::after { top: -6rem; width: 30vw; height: 9.913296213vw; } .article-content .wrapper-narrow-no-center { position: relative; } .article-content .wrapper-narrow-no-center::before { content: ' '; position: absolute; top: 10%; right: -7.5rem; transform: translateX(100%); width: 30vw; height: 9vw; background-image: url("/images/hoop-4-birch.svg"); background-position: center; background-size: 99%; background-repeat: no-repeat; } .article-content .wrapper-narrow-no-center::after { content: ' '; position: absolute; bottom: 10%; right: -10rem; transform: translateX(100%); width: 25vw; height: 7.5vw; background-image: url("/images/g-birch-1-group.svg"); background-position: center; background-size: 99%; background-repeat: no-repeat; } }
 
 @media only screen and (min-width: 85em) { .site-introduction { background-position: left 1.3rem; } h2.heading-deco::after { top: -6rem; width: 25vw; height: 8.2610801775vw; transform: translateX(-90%); } }
 

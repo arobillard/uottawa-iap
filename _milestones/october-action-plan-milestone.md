@@ -1,9 +1,13 @@
 ---
-title: October Action Plan Milestones
+title: Action Plan Milestones - October
 layout: milestones
 pubDate: October 28, 2020
-hoopRef: 2
+author: Jesse Doe
+authorTitle: Director of Indigenous Affaires
+department: Indigenous Affaires
+hoopRef: 4
 order: 2
+transPage: /fr/etape-importante/etapes-importante-octobre
 ---
 Nullam vehicula ipsum a arcu cursus vitae congue. Euismod lacinia at quis risus sed vulputate odio ut. Faucibus interdum posuere lorem ipsum dolor sit amet. Ridiculus mus mauris vitae ultricies leo integer malesuada. Accumsan lacus vel facilisis volutpat est velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed libero enim sed faucibus turpis in eu mi. A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Blandit libero volutpat sed cras ornare arcu dui vivamus. Et malesuada fames ac turpis egestas sed tempus urna. Rhoncus urna neque viverra justo nec ultrices dui. Eros in cursus turpis massa tincidunt. Lectus vestibulum mattis ullamcorper velit sed. Fermentum et sollicitudin ac orci phasellus. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Amet dictum sit amet justo donec enim diam vulputate ut. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna.
 

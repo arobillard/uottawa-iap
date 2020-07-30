@@ -1,9 +1,14 @@
 ---
-title: September Action Plan Milestones
+title: Étapes importante de la plan d'action - Octobre
 layout: milestones
-pubDate: September 26, 2020
-hoopRef: 1
-order: 1
+pubDate: October 28, 2020
+author: Jesse Doe
+authorTitle: Director of Indigenous Affaires
+department: Indigenous Affaires
+hoopRef: 4
+order: 2
+lang: fr
+transPage: /milestones/october-action-plan-milestone
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed libero enim sed faucibus turpis in eu mi. A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Blandit libero volutpat sed cras ornare arcu dui vivamus. Et malesuada fames ac turpis egestas sed tempus urna. Rhoncus urna neque viverra justo nec ultrices dui. Eros in cursus turpis massa tincidunt. Lectus vestibulum mattis ullamcorper velit sed. Fermentum et sollicitudin ac orci phasellus. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Amet dictum sit amet justo donec enim diam vulputate ut. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Nullam vehicula ipsum a arcu cursus vitae congue. Euismod lacinia at quis risus sed vulputate odio ut. Faucibus interdum posuere lorem ipsum dolor sit amet. Ridiculus mus mauris vitae ultricies leo integer malesuada. Accumsan lacus vel facilisis volutpat est velit.
 

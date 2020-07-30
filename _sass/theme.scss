@@ -252,6 +252,36 @@ h2.heading-deco {
     }
   }
 
+  .article-content .wrapper-narrow-no-center {
+    position: relative;
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 10%;
+      right: -7.5rem;
+      transform: translateX(100%);
+      width: 30vw;
+      height: 9vw;
+      background-image: url('#{$baseurl}/images/hoop-4-birch.svg');
+      background-position: center;
+      background-size: 99%;
+      background-repeat: no-repeat;
+    }
+    &::after {
+      content: ' ';
+      position: absolute;
+      bottom: 10%;
+      right: -10rem;
+      transform: translateX(100%);
+      width: 25vw;
+      height: 7.5vw;
+      background-image: url('#{$baseurl}/images/g-birch-1-group.svg');
+      background-position: center;
+      background-size: 99%;
+      background-repeat: no-repeat;
+    }
+  }
+
 }
 
 @media only screen and (min-width: 85em) {

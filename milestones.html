@@ -3,7 +3,7 @@ layout: default
 title: Milestones
 transPage: /fr/etape-importante
 ---
-{%- capture msCheck -%}{% for milestone in site.milestones limit:4 %}{%- if milestone.title -%}1{% break %}{%- endif -%}{% endfor%}{%- endcapture -%}
+{%- capture msCheck -%}{% for milestone in site.milestones %}{%- if milestone.title -%}1{% break %}{%- endif -%}{% endfor%}{%- endcapture -%}
 
 {% include patterns/hero-basic.liquid headline=page.title %}
 
@@ -11,15 +11,8 @@ transPage: /fr/etape-importante
 <section id="milestones" tabindex="0">
   <div class="wrapper gutter pad-t-b-6 grid-m-2 grid-l-3">
     {%- if msCheck != '' -%}
-    {% for milestone in milestones_in_order reversed limit:4 %}
-    <div class="col-update push-2">
-      <div class="milestone-header-{{ milestone.hoopRef }} gutter-1-2 pad-t-3 push">
-        <p class="push-1-2">{{ milestone.pubDate }}</p>
-      </div>
-      <h3 class="push-1-2">{{ milestone.title }}</h3>
-      {{ milestone.content | truncate: 200 | markdownify }}
-      <a class="bold block text-1-1-4" href="{{ milestone.url }}">Read More</a>
-    </div>
+    {% for milestone in milestones_in_order reversed %}
+      {% include patterns/milestone.liquid hoopRef=milestone.hoopRef pubDate=milestone.pubDate title=milestone.title content=milestone.content url=milestone.url %}
     {% endfor %}
     {%- else -%}
     <p>No updates have been released.</p>
