@@ -1,9 +1,12 @@
+const url = window.location.href;
 const body = document.querySelector('body');
 const masthead = document.querySelector('.masthead');
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.nav');
 const navLinks = Array.from(document.querySelectorAll('.nav > ul > li > a'));
 const toTop = document.querySelector('.to-top');
+
+console.log(url)
 
 body.classList.remove('no-js');
 
@@ -185,10 +188,10 @@ function navigateHoop(e) {
   const lang = document.querySelector('html').getAttribute('lang');
   if (lang === "fr") {
     const ref = e.currentTarget.classList[1];
-    window.location.href = `/fr/${ref}`;
+    window.location.href = url + ref;
   } else {
     const ref = e.currentTarget.classList[0];
-    window.location.href = `/${ref}`;
+    window.location.href = url + ref;
   }
 }
 
