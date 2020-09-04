@@ -1,7 +1,7 @@
 destination: ./compiled
 permalink: pretty
 sass:
-  style: extended
+  style: compressed
 
 collections:
   hoop-1:
@@ -41,5 +41,5 @@ collections:
     output: false
     permalink: /:collection/:path/
 
-# gems:
-#   - octopress-minify-html
+gems:
+  - octopress-minify-html
